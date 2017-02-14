@@ -75,6 +75,7 @@ class ActionAdmin(admin.ModelAdmin):
         'name',
         ('method', 'path'),
         'data',
+        'files',
         'status_code',
         'content',
     )
@@ -140,6 +141,7 @@ class StepInline(admin.StackedInline):
         'action_method',
         'action_path',
         'action_data',
+        'action_files',
         'action_status_code',
         'action_validators',
     )
@@ -160,6 +162,9 @@ class StepInline(admin.StackedInline):
     def action_data(self, step):
         return step.action.data
 
+    def action_files(self, step):
+        return step.action.files
+
     def action_status_code(self, step):
         return step.action.status_code
 
@@ -174,6 +179,7 @@ class StepInline(admin.StackedInline):
         'action_method',
         'action_path',
         'action_data',
+        'action_files',
         'action_status_code',
         'action_validators',
     )

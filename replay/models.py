@@ -4,10 +4,6 @@
 * Do not make actions into templates/generics without great care! Some data
   like files may be deleted because they are stored outside the database.
 
-TODO
-
-* Admin function to run validator on response.
-
 """
 
 from django.db import models
@@ -22,6 +18,7 @@ class Action(models.Model):
     method = models.CharField(max_length=8, choices=HTTP_METHODS)
     path = models.TextField()
     data = models.TextField()
+    files = models.TextField()
     status_code = models.CharField(max_length=3)
     content = models.TextField(blank=True)
 

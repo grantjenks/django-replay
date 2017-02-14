@@ -2,8 +2,7 @@
 
 TODO
 
-* Accept optional [scenario name] argument to record scenario.
-* When recording scenario, set "order" field on each step.
+* Add support for "runserver" options.
 
 """
 

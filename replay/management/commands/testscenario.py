@@ -82,11 +82,15 @@ class Command(BaseCommand):
     def request(self, action, state):
         func = getattr(self.client, action.method.lower())
         data = json.loads(expand(action.data, state))
+        files = json.loads(expand(action.files, state))
         path = expand(action.path, state)
-        response = func(path, data)
-        status_code = response.status_code
 
-        if 300 <= status_code < 400:
-            return str(status_code), response.url
-        else:
-            return str(status_code), response.content
+        for key, value in files.items():
+            data[key] = open(value, 'rb')
+
+        response = func(path, data)
+        status_code = str(response.status_code)
+        redirect = '300' <= status_code < '400'
+        content = response.url if redirect else response.content
+
+        return status_code, content
