@@ -1,0 +1,11 @@
+# Python byte-code
+*.py[co]
+
+# Anything under a bin directory
+bin/
+
+# Anything under a virutalenv directory
+env27/
+
+# Coverage files.
+.coverage
