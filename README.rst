@@ -1,8 +1,8 @@
 Django Replay
 =============
 
-`Django Replay <http://www.grantjenks.com/docs/django-replay/>`_ is an Apache2
-licensed Python module that records and replays web requests.
+Django Replay is an Apache2 licensed Python module that records and replays web
+requests.
 
 Features
 --------
