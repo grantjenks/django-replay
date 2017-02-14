@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
-import sys
 import replay
+import sys
 
 
 class Tox(TestCommand):
@@ -26,11 +26,11 @@ setup(
     author='Grant Jenks',
     author_email='contact@grantjenks.com',
     url='http://www.grantjenks.com/docs/django-replay/',
-    py_modules=['replay'],
+    license='Apache 2.0',
+    packages=find_packages(exclude=('docs', 'tests')),
     package_data={'': ['LICENSE', 'README.rst']},
     tests_require=['tox'],
     cmdclass={'test': Tox},
-    license='Apache 2.0',
     install_requires=[],
     classifiers=(
         'Development Status :: 4 - Beta',
