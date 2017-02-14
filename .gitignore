@@ -9,3 +9,7 @@ env27/
 
 # Coverage files.
 .coverage
+
+# Build directories for distribution
+/dist/
+/django_replay.egg-info/
