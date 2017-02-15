@@ -5,7 +5,6 @@
 import json
 import re
 import string
-import urlparse
 
 from django.core.management.base import BaseCommand, CommandError
 from django.test import Client
@@ -33,7 +32,7 @@ class Command(BaseCommand):
             if not scenarios:
                 scenarios = Scenario.objects.all().order_by('priority', 'id')
 
-        self.client = Client()
+        self.client = Client()  # pylint: disable=attribute-defined-outside-init
         state = {}
 
         for scenario in scenarios:
@@ -47,7 +46,7 @@ class Command(BaseCommand):
         for step in steps:
             action = step.action
             status_code, content = self.request(action, state)
-            
+
             if status_code != action.status_code:
                 message = 'FAIL %r status code: %s expected: %s'
                 data = action, status_code, action.status_code
@@ -55,13 +54,13 @@ class Command(BaseCommand):
                 self.stdout.write('FAIL STATE')
                 for key, value in state.items():
                     self.stdout.write('FAIL %s = %s' % (key, value))
-                
+
                 errors += 1
                 break
 
             validators = Validator.objects.filter(action=action)
             validators = validators.order_by('order', 'id')
-            
+
             for validator in validators:
                 pattern = expand(validator.pattern, state)
                 match = re.search(pattern, content)

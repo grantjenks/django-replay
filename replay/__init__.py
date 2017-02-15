@@ -1,3 +1,7 @@
+"""Django Replay
+
+"""
+
 __title__ = 'replay'
 __version__ = '0.2.0'
 __build__ = 0x000200
