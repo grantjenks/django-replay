@@ -2,7 +2,7 @@ import pytest
 
 from replay.models import Action
 
-pytestmark = pytest.mark.django_db
+pytestmark = pytest.mark.django_db  # pylint: disable=invalid-name
 
 def test_action():
     action = Action.objects.create(
