@@ -5,11 +5,14 @@
 bin/
 
 # Anything under a virutalenv directory
-env27/
+/env*/
 
 # Coverage files.
 .coverage
 
-# Build directories for distribution
+# Test, build, and deployment directories.
+/.cache/
+/.tox/
+/build/
 /dist/
 /django_replay.egg-info/

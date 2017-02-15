@@ -1,3 +1,17 @@
-# from django.test import TestCase
+import pytest
 
-# Create your tests here.
+from replay.models import Action
+
+pytestmark = pytest.mark.django_db
+
+def test_action():
+    action = Action.objects.create(
+        name='Test',
+        method='GET',
+        path='/',
+        data='{}',
+        files='{}',
+        status_code='200',
+        content='',
+    )
+    assert str(action) == 'Test'
