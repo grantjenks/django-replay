@@ -1,7 +1,7 @@
 Django Replay
 =============
 
-`Django Replay <http://www.grantjenks.com/docs/django-replay/>`_ is an Apache2
+`Django Replay <http://www.grantjenks.com/docs/django-replay/>`__ is an Apache2
 licensed Django application that records and replays web requests.
 
 Features
