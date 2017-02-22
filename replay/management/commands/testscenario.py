@@ -9,7 +9,7 @@ import string
 from django.core.management.base import BaseCommand, CommandError
 from django.test import Client
 
-from replay.models import Validator, Scenario, Step
+from replay.models import Scenario, Action, Validator
 
 def expand(text, mapping):
     template = string.Template(text)
@@ -40,11 +40,10 @@ class Command(BaseCommand):
 
 
     def run(self, scenario, state):
-        steps = Step.objects.filter(scenario=scenario).order_by('order', 'id')
+        actions = Action.objects.filter(scenario=scenario).order_by('order', 'id')
         errors = 0
 
-        for step in steps:
-            action = step.action
+        for action in actions:
             status_code, content = self.request(action, state)
 
             if status_code != action.status_code:
