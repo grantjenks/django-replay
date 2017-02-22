@@ -6,7 +6,7 @@ from django.contrib import admin
 from django.core.urlresolvers import reverse
 from django.db.models import Count
 from django.shortcuts import redirect
-from django.utils.html import format_html, format_html_join
+from django.utils.html import format_html_join
 from django.utils.safestring import mark_safe
 
 from replay.models import Action, Validator, Scenario
