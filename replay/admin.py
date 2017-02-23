@@ -6,7 +6,7 @@ from django.contrib import admin
 from django.core.urlresolvers import reverse
 from django.db.models import Count
 from django.shortcuts import redirect
-from django.utils.html import format_html_join
+from django.utils.html import format_html, format_html_join
 from django.utils.safestring import mark_safe
 
 from replay.models import Action, Validator, Scenario
@@ -80,7 +80,7 @@ class ActionAdmin(admin.ModelAdmin):
     def scenario_link(self, action):
         scenario = action.scenario
         url = reverse('admin:replay_scenario_change', args=(scenario.id,))
-        return mark_safe('<a href="%s">%s</a>' % (url, scenario))
+        return format_html('<a href="{}">{}</a>', url, scenario)
 
     scenario_link.short_description = 'Scenario Link'
     scenario_link.allow_tags = True
@@ -140,7 +140,7 @@ class ValidatorAdmin(admin.ModelAdmin):
     def action_link(self, validator):
         action = validator.action
         url = reverse('admin:replay_action_change', args=(action.id,))
-        return mark_safe('<a href="%s">%s</a>' % (url, action))
+        return format_html('<a href="{}">{}</a>', url, action)
 
     fields = (
         'action',
@@ -174,7 +174,7 @@ admin.site.register(Validator, ValidatorAdmin)
 class ActionInline(admin.StackedInline):
     def action_link(self, action):
         url = reverse('admin:replay_action_change', args=(action.id,))
-        return mark_safe('<a href="%s">%s</a>' % (url, action))
+        return format_html('<a href="{}">{}</a>', url, action)
 
     def validators(self, action):
         validators = Validator.objects.filter(action=action)
