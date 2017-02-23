@@ -10,10 +10,11 @@ def escape(text):
 class RecorderMiddleware(object):
     def process_response(self, request, response):
         "Create Action object based on request and response."
+        kwargs = {'indent': 4, 'separators': (',', ': ')}
         method = request.method
-        data = json.dumps(getattr(request, method))
+        data = json.dumps(getattr(request, method), **kwargs)
         files_names = {key: value.name for key, value in request.FILES.items()}
-        files = json.dumps(files_names)
+        files = json.dumps(files_names, **kwargs)
         status_code = response.status_code
         redirect = 300 <= status_code < 400
         content = response.content if not redirect else response.url
