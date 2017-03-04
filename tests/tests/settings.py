@@ -25,7 +25,10 @@ SECRET_KEY = 'e&44&(g(idl$1&j1vn8+bpvc9^w-oo-$de83wlpjjcf$ujp(4('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'testserver',
+]
 
 
 # Application definition
@@ -37,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tests',
     'replay',
 )
 
@@ -78,7 +82,7 @@ WSGI_APPLICATION = 'tests.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'bin', 'db.sqlite3'),
     }
 }
 

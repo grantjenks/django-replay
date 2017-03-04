@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{ essay.title }} | Test</title>
+  </head>
+  <body>
+    <h1>{{ essay.title }}</h1>
+    {{ essay.text|linebreaksbr }}
+    <hr>
+    {% for comment in comments %}
+      {{ comment.date }}
+    {% endfor %}
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Submit" />
+    </form>
+    <hr>
+    <a href="{% url 'index' %}">Test</a>
+  </body>
+</html>
