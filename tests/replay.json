@@ -1,0 +1,354 @@
+[
+{
+    "fields": {
+        "priority": 0.0,
+        "name": "Admin Login"
+    },
+    "model": "replay.scenario",
+    "pk": 1
+},
+{
+    "fields": {
+        "priority": 0.2,
+        "name": "Edit Essay"
+    },
+    "model": "replay.scenario",
+    "pk": 3
+},
+{
+    "fields": {
+        "priority": 0.3,
+        "name": "View Essay"
+    },
+    "model": "replay.scenario",
+    "pk": 4
+},
+{
+    "fields": {
+        "priority": 0.4,
+        "name": "Post Comment"
+    },
+    "model": "replay.scenario",
+    "pk": 5
+},
+{
+    "fields": {
+        "priority": 0.1,
+        "name": "Create Essay"
+    },
+    "model": "replay.scenario",
+    "pk": 6
+},
+{
+    "fields": {
+        "files": "{}",
+        "name": "",
+        "scenario": 1,
+        "status_code": "302",
+        "order": 1.0,
+        "content": "/admin/login/",
+        "path": "/admin/login/",
+        "data": "{\r\n    \"username\": \"admin\",\r\n    \"csrfmiddlewaretoken\": \"47PDoLiRZEHCMlcjzqTrGF8akrbcSEML\",\r\n    \"password\": \"password\",\r\n    \"next\": \"/admin/login/\"\r\n}",
+        "method": "POST"
+    },
+    "model": "replay.action",
+    "pk": 16
+},
+{
+    "fields": {
+        "files": "{}",
+        "name": "",
+        "scenario": 1,
+        "status_code": "302",
+        "order": 1.0,
+        "content": "/admin/",
+        "path": "/admin/login/",
+        "data": "{}",
+        "method": "GET"
+    },
+    "model": "replay.action",
+    "pk": 17
+},
+{
+    "fields": {
+        "files": "{}",
+        "name": "Site administration | Django site admin",
+        "scenario": 1,
+        "status_code": "200",
+        "order": 1.0,
+        "content": "<!DOCTYPE html>\r\n\r\n<html lang=\"en-us\" >\r\n<head>\r\n<title>Site administration | Django site admin</title>\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/admin/css/base.css\" />\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/admin/css/dashboard.css\" />\r\n<!--[if lte IE 7]><link rel=\"stylesheet\" type=\"text/css\" href=\"/static/admin/css/ie.css\" /><![endif]-->\r\n\r\n<script type=\"text/javascript\">window.__admin_media_prefix__ = \"/static/admin/\";</script>\r\n<script type=\"text/javascript\">window.__admin_utc_offset__ = \"0\";</script>\r\n\r\n<meta name=\"robots\" content=\"NONE,NOARCHIVE\" />\r\n</head>\r\n\r\n\r\n<body class=\" dashboard\">\r\n\r\n<!-- Container -->\r\n<div id=\"container\">\r\n\r\n    \r\n    <!-- Header -->\r\n    <div id=\"header\">\r\n        <div id=\"branding\">\r\n        \r\n<h1 id=\"site-name\"><a href=\"/admin/\">Django administration</a></h1>\r\n\r\n        </div>\r\n        \r\n        \r\n        <div id=\"user-tools\">\r\n            \r\n                Welcome,\r\n                <strong>admin</strong>.\r\n            \r\n            \r\n                \r\n                    <a href=\"/\">View site</a> /\r\n                \r\n                \r\n                    \r\n                    \r\n                \r\n                \r\n                <a href=\"/admin/password_change/\">Change password</a> /\r\n                \r\n                <a href=\"/admin/logout/\">Log out</a>\r\n            \r\n        </div>\r\n        \r\n        \r\n        \r\n    </div>\r\n    <!-- END Header -->\r\n    \r\n    \r\n\r\n    \r\n        \r\n    \r\n\r\n    <!-- Content -->\r\n    <div id=\"content\" class=\"colMS\">\r\n        \r\n        <h1>Site administration</h1>\r\n        \r\n<div id=\"content-main\">\r\n\r\n\r\n    \r\n        <div class=\"app-auth module\">\r\n        <table>\r\n        <caption>\r\n            <a href=\"/admin/auth/\" class=\"section\" title=\"Models in the Authentication and Authorization application\">Authentication and Authorization</a>\r\n        </caption>\r\n        \r\n            <tr class=\"model-group\">\r\n            \r\n                <th scope=\"row\"><a href=\"/admin/auth/group/\">Groups</a></th>\r\n            \r\n\r\n            \r\n                <td><a href=\"/admin/auth/group/add/\" class=\"addlink\">Add</a></td>\r\n            \r\n\r\n            \r\n                <td><a href=\"/admin/auth/group/\" class=\"changelink\">Change</a></td>\r\n            \r\n            </tr>\r\n        \r\n            <tr class=\"model-user\">\r\n            \r\n                <th scope=\"row\"><a href=\"/admin/auth/user/\">Users</a></th>\r\n            \r\n\r\n            \r\n                <td><a href=\"/admin/auth/user/add/\" class=\"addlink\">Add</a></td>\r\n            \r\n\r\n            \r\n                <td><a href=\"/admin/auth/user/\" class=\"changelink\">Change</a></td>\r\n            \r\n            </tr>\r\n        \r\n        </table>\r\n        </div>\r\n    \r\n        <div class=\"app-replay module\">\r\n        <table>\r\n        <caption>\r\n            <a href=\"/admin/replay/\" class=\"section\" title=\"Models in the Replay application\">Replay</a>\r\n        </caption>\r\n        \r\n            <tr class=\"model-action\">\r\n            \r\n                <th scope=\"row\"><a href=\"/admin/replay/action/\">Actions</a></th>\r\n            \r\n\r\n            \r\n                <td><a href=\"/admin/replay/action/add/\" class=\"addlink\">Add</a></td>\r\n            \r\n\r\n            \r\n                <td><a href=\"/admin/replay/action/\" class=\"changelink\">Change</a></td>\r\n            \r\n            </tr>\r\n        \r\n            <tr class=\"model-scenario\">\r\n            \r\n                <th scope=\"row\"><a href=\"/admin/replay/scenario/\">Scenarios</a></th>\r\n            \r\n\r\n            \r\n                <td><a href=\"/admin/replay/scenario/add/\" class=\"addlink\">Add</a></td>\r\n            \r\n\r\n            \r\n                <td><a href=\"/admin/replay/scenario/\" class=\"changelink\">Change</a></td>\r\n            \r\n            </tr>\r\n        \r\n            <tr class=\"model-validator\">\r\n            \r\n                <th scope=\"row\"><a href=\"/admin/replay/validator/\">Validators</a></th>\r\n            \r\n\r\n            \r\n                <td><a href=\"/admin/replay/validator/add/\" class=\"addlink\">Add</a></td>\r\n            \r\n\r\n            \r\n                <td><a href=\"/admin/replay/validator/\" class=\"changelink\">Change</a></td>\r\n            \r\n            </tr>\r\n        \r\n        </table>\r\n        </div>\r\n    \r\n        <div class=\"app-tests module\">\r\n        <table>\r\n        <caption>\r\n            <a href=\"/admin/tests/\" class=\"section\" title=\"Models in the Tests application\">Tests</a>\r\n        </caption>\r\n        \r\n            <tr class=\"model-comment\">\r\n            \r\n                <th scope=\"row\"><a href=\"/admin/tests/comment/\">Comments</a></th>\r\n            \r\n\r\n            \r\n                <td><a href=\"/admin/tests/comment/add/\" class=\"addlink\">Add</a></td>\r\n            \r\n\r\n            \r\n                <td><a href=\"/admin/tests/comment/\" class=\"changelink\">Change</a></td>\r\n            \r\n            </tr>\r\n        \r\n            <tr class=\"model-essay\">\r\n            \r\n                <th scope=\"row\"><a href=\"/admin/tests/essay/\">Essays</a></th>\r\n            \r\n\r\n            \r\n                <td><a href=\"/admin/tests/essay/add/\" class=\"addlink\">Add</a></td>\r\n            \r\n\r\n            \r\n                <td><a href=\"/admin/tests/essay/\" class=\"changelink\">Change</a></td>\r\n            \r\n            </tr>\r\n        \r\n        </table>\r\n        </div>\r\n    \r\n\r\n</div>\r\n\r\n        \r\n<div id=\"content-related\">\r\n    <div class=\"module\" id=\"recent-actions-module\">\r\n        <h2>Recent Actions</h2>\r\n        <h3>My Actions</h3>\r\n            \r\n            \r\n            \r\n            <ul class=\"actionlist\">\r\n            \r\n            <li class=\"deletelink\">\r\n                \r\n                    NameError at /essays/1\r\n                \r\n                <br/>\r\n                \r\n                    <span class=\"mini quiet\">Action</span>\r\n                \r\n            </li>\r\n            \r\n            <li class=\"deletelink\">\r\n                \r\n                    Test Title | Test\r\n                \r\n                <br/>\r\n                \r\n                    <span class=\"mini quiet\">Action</span>\r\n                \r\n            </li>\r\n            \r\n            <li class=\"deletelink\">\r\n                \r\n                    Test\r\n                \r\n                <br/>\r\n                \r\n                    <span class=\"mini quiet\">Action</span>\r\n                \r\n            </li>\r\n            \r\n            <li class=\"deletelink\">\r\n                \r\n                    Select essay to change | Django site admin\r\n                \r\n                <br/>\r\n                \r\n                    <span class=\"mini quiet\">Action</span>\r\n                \r\n            </li>\r\n            \r\n            <li class=\"deletelink\">\r\n                \r\n                    &lt;Action: 10 POST /admin/tests/essay/add/&gt;\r\n                \r\n                <br/>\r\n                \r\n                    <span class=\"mini quiet\">Action</span>\r\n                \r\n            </li>\r\n            \r\n            <li class=\"deletelink\">\r\n                \r\n                    Add essay | Django site admin\r\n                \r\n                <br/>\r\n                \r\n                    <span class=\"mini quiet\">Action</span>\r\n                \r\n            </li>\r\n            \r\n            <li class=\"deletelink\">\r\n                \r\n                    Select essay to change | Django site admin\r\n                \r\n                <br/>\r\n                \r\n                    <span class=\"mini quiet\">Action</span>\r\n                \r\n            </li>\r\n            \r\n            <li class=\"deletelink\">\r\n                \r\n                    Site administration | Django site admin\r\n                \r\n                <br/>\r\n                \r\n                    <span class=\"mini quiet\">Action</span>\r\n                \r\n            </li>\r\n            \r\n            <li class=\"deletelink\">\r\n                \r\n                    &lt;Action: 4 GET /admin/login/&gt;\r\n                \r\n                <br/>\r\n                \r\n                    <span class=\"mini quiet\">Action</span>\r\n                \r\n            </li>\r\n            \r\n            <li class=\"deletelink\">\r\n                \r\n                    &lt;Action: 3 POST /admin/login/&gt;\r\n                \r\n                <br/>\r\n                \r\n                    <span class=\"mini quiet\">Action</span>\r\n                \r\n            </li>\r\n            \r\n            </ul>\r\n            \r\n    </div>\r\n</div>\r\n\r\n        <br class=\"clear\" />\r\n    </div>\r\n    <!-- END Content -->\r\n\r\n    <div id=\"footer\"></div>\r\n</div>\r\n<!-- END Container -->\r\n\r\n</body>\r\n</html>\r\n",
+        "path": "/admin/",
+        "data": "{}",
+        "method": "GET"
+    },
+    "model": "replay.action",
+    "pk": 18
+},
+{
+    "fields": {
+        "files": "{}",
+        "name": "Change essay | Django site admin",
+        "scenario": 3,
+        "status_code": "200",
+        "order": 1.0,
+        "content": "<!DOCTYPE html>\r\n\r\n<html lang=\"en-us\" >\r\n<head>\r\n<title>Change essay | Django site admin</title>\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/admin/css/base.css\" />\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/admin/css/forms.css\" />\r\n<!--[if lte IE 7]><link rel=\"stylesheet\" type=\"text/css\" href=\"/static/admin/css/ie.css\" /><![endif]-->\r\n\r\n<script type=\"text/javascript\">window.__admin_media_prefix__ = \"/static/admin/\";</script>\r\n<script type=\"text/javascript\">window.__admin_utc_offset__ = \"0\";</script>\r\n\r\n<script type=\"text/javascript\" src=\"/admin/jsi18n/\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/core.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/jquery.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/jquery.init.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/admin/RelatedObjectLookups.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/actions.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/calendar.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/admin/DateTimeShortcuts.js\"></script>\r\n\r\n<meta name=\"robots\" content=\"NONE,NOARCHIVE\" />\r\n</head>\r\n\r\n\r\n<body class=\" app-tests model-essay change-form\">\r\n\r\n<!-- Container -->\r\n<div id=\"container\">\r\n\r\n    \r\n    <!-- Header -->\r\n    <div id=\"header\">\r\n        <div id=\"branding\">\r\n        \r\n<h1 id=\"site-name\"><a href=\"/admin/\">Django administration</a></h1>\r\n\r\n        </div>\r\n        \r\n        \r\n        <div id=\"user-tools\">\r\n            \r\n                Welcome,\r\n                <strong>admin</strong>.\r\n            \r\n            \r\n                \r\n                    <a href=\"/\">View site</a> /\r\n                \r\n                \r\n                    \r\n                    \r\n                \r\n                \r\n                <a href=\"/admin/password_change/\">Change password</a> /\r\n                \r\n                <a href=\"/admin/logout/\">Log out</a>\r\n            \r\n        </div>\r\n        \r\n        \r\n        \r\n    </div>\r\n    <!-- END Header -->\r\n    \r\n<div class=\"breadcrumbs\">\r\n<a href=\"/admin/\">Home</a>\r\n&rsaquo; <a href=\"/admin/tests/\">Tests</a>\r\n&rsaquo; <a href=\"/admin/tests/essay/\">Essays</a>\r\n&rsaquo; Test Title\r\n</div>\r\n\r\n    \r\n\r\n    \r\n        \r\n    \r\n\r\n    <!-- Content -->\r\n    <div id=\"content\" class=\"colM\">\r\n        \r\n        <h1>Change essay</h1>\r\n        <div id=\"content-main\">\r\n\r\n\r\n  <ul class=\"object-tools\">\r\n    \r\n    <li>\r\n        \r\n        <a href=\"/admin/tests/essay/2/history/\" class=\"historylink\">History</a>\r\n    </li>\r\n    \r\n    \r\n  </ul>\r\n\r\n\r\n<form enctype=\"multipart/form-data\" action=\"\" method=\"post\" id=\"essay_form\" novalidate><input type='hidden' name='csrfmiddlewaretoken' value='LCwJMutT4xE3JHySLLUFqz2kr1QJA4PB' />\r\n<div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n  <fieldset class=\"module aligned \">\r\n    \r\n    \r\n    \r\n        <div class=\"form-row field-publish_date\">\r\n            \r\n            \r\n                <div>\r\n                    \r\n                    \r\n                        <label for=\"id_publish_date_0\">Publish date:</label>\r\n                        \r\n                            <p class=\"datetime\">Date: <input class=\"vDateField\" id=\"id_publish_date_0\" name=\"publish_date_0\" size=\"10\" type=\"text\" /><br />Time: <input class=\"vTimeField\" id=\"id_publish_date_1\" name=\"publish_date_1\" size=\"8\" type=\"text\" /></p>\r\n                        \r\n                    \r\n                    \r\n                </div>\r\n            \r\n        </div>\r\n    \r\n        <div class=\"form-row field-title\">\r\n            \r\n            \r\n                <div>\r\n                    \r\n                    \r\n                        <label class=\"required\" for=\"id_title\">Title:</label>\r\n                        \r\n                            <input class=\"vTextField\" id=\"id_title\" maxlength=\"100\" name=\"title\" type=\"text\" value=\"Test Title\" />\r\n                        \r\n                    \r\n                    \r\n                </div>\r\n            \r\n        </div>\r\n    \r\n        <div class=\"form-row field-text\">\r\n            \r\n            \r\n                <div>\r\n                    \r\n                    \r\n                        <label class=\"required\" for=\"id_text\">Text:</label>\r\n                        \r\n                            <textarea class=\"vLargeTextField\" cols=\"40\" id=\"id_text\" name=\"text\" rows=\"10\">\r\nThis is a test.</textarea>\r\n                        \r\n                    \r\n                    \r\n                </div>\r\n            \r\n        </div>\r\n    \r\n</fieldset>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<div class=\"submit-row\">\r\n<input type=\"submit\" value=\"Save\" class=\"default\" name=\"_save\" />\r\n\r\n    \r\n    <p class=\"deletelink-box\"><a href=\"/admin/tests/essay/2/delete/\" class=\"deletelink\">Delete</a></p>\r\n\r\n\r\n<input type=\"submit\" value=\"Save and add another\" name=\"_addanother\" />\r\n<input type=\"submit\" value=\"Save and continue editing\" name=\"_continue\" />\r\n</div>\r\n\r\n\r\n\r\n    <script type=\"text/javascript\">\r\n        (function($) {\r\n            $(document).ready(function() {\r\n                $('.add-another').click(function(e) {\r\n                    e.preventDefault();\r\n                    showAddAnotherPopup(this);\r\n                });\r\n            \r\n            });\r\n        })(django.jQuery);\r\n    </script>\r\n\r\n\r\n\r\n\r\n<script type=\"text/javascript\">\r\n(function($) {\r\n    var field;\r\n\r\n\r\n})(django.jQuery);\r\n</script>\r\n\r\n\r\n</div>\r\n</form></div>\r\n\r\n        \r\n        <br class=\"clear\" />\r\n    </div>\r\n    <!-- END Content -->\r\n\r\n    <div id=\"footer\"></div>\r\n</div>\r\n<!-- END Container -->\r\n\r\n</body>\r\n</html>\r\n",
+        "path": "/admin/tests/essay/$eid/",
+        "data": "{}",
+        "method": "GET"
+    },
+    "model": "replay.action",
+    "pk": 30
+},
+{
+    "fields": {
+        "files": "{}",
+        "name": "",
+        "scenario": 3,
+        "status_code": "302",
+        "order": 1.0,
+        "content": "/admin/tests/essay/",
+        "path": "/admin/tests/essay/$eid/",
+        "data": "{\r\n    \"_save\": \"Save\",\r\n    \"title\": \"Test Title\",\r\n    \"text\": \"This is a test.\",\r\n    \"csrfmiddlewaretoken\": \"LCwJMutT4xE3JHySLLUFqz2kr1QJA4PB\",\r\n    \"publish_date_0\": \"2017-03-04\",\r\n    \"publish_date_1\": \"23:24:37\"\r\n}",
+        "method": "POST"
+    },
+    "model": "replay.action",
+    "pk": 32
+},
+{
+    "fields": {
+        "files": "{}",
+        "name": "Test",
+        "scenario": 4,
+        "status_code": "200",
+        "order": 1.0,
+        "content": "<!doctype html>\r\n<html>\r\n  <head>\r\n    <title>Test</title>\r\n  </head>\r\n  <body>\r\n    <h1>Test</h1>\r\n    <a href=\"/\">Test</a>\r\n    <h2>Essays</h2>\r\n    <ul>\r\n      \r\n        <li><a href=\"/essays/2\">Test Title</a></li>\r\n      \r\n    </ul>\r\n  </body>\r\n</html>\r\n",
+        "path": "/",
+        "data": "{}",
+        "method": "GET"
+    },
+    "model": "replay.action",
+    "pk": 35
+},
+{
+    "fields": {
+        "files": "{}",
+        "name": "Test Title | Test",
+        "scenario": 4,
+        "status_code": "200",
+        "order": 1.0,
+        "content": "<!doctype html>\r\n<html>\r\n  <head>\r\n    <title>Test Title | Test</title>\r\n  </head>\r\n  <body>\r\n    <h1>Test Title</h1>\r\n    This is a test.\r\n    <hr>\r\n    \r\n    <form method=\"post\">\r\n      <input type='hidden' name='csrfmiddlewaretoken' value='LCwJMutT4xE3JHySLLUFqz2kr1QJA4PB' />\r\n      <p><label for=\"id_name\">Name:</label> <input id=\"id_name\" maxlength=\"100\" name=\"name\" type=\"text\" /></p>\r\n<p><label for=\"id_website\">Website:</label> <input id=\"id_website\" maxlength=\"200\" name=\"website\" type=\"url\" /></p>\r\n<p><label for=\"id_email\">Email:</label> <input id=\"id_email\" maxlength=\"254\" name=\"email\" type=\"email\" /></p>\r\n<p><label for=\"id_text\">Text:</label> <textarea cols=\"40\" id=\"id_text\" name=\"text\" rows=\"10\">\r\n</textarea></p>\r\n      <input type=\"submit\" value=\"Submit\" />\r\n    </form>\r\n    <hr>\r\n    <a href=\"/\">Test</a>\r\n  </body>\r\n</html>\r\n",
+        "path": "/essays/$eid",
+        "data": "{}",
+        "method": "GET"
+    },
+    "model": "replay.action",
+    "pk": 37
+},
+{
+    "fields": {
+        "files": "{}",
+        "name": "",
+        "scenario": 5,
+        "status_code": "302",
+        "order": 1.0,
+        "content": "/essays/2",
+        "path": "/essays/$eid",
+        "data": "{\r\n    \"website\": \"\",\r\n    \"text\": \"This is a test comment.\",\r\n    \"csrfmiddlewaretoken\": \"LCwJMutT4xE3JHySLLUFqz2kr1QJA4PB\",\r\n    \"name\": \"Grant\",\r\n    \"email\": \"grant@example.com\"\r\n}",
+        "method": "POST"
+    },
+    "model": "replay.action",
+    "pk": 38
+},
+{
+    "fields": {
+        "files": "{}",
+        "name": "Test Title | Test",
+        "scenario": 5,
+        "status_code": "200",
+        "order": 1.0,
+        "content": "<!doctype html>\r\n<html>\r\n  <head>\r\n    <title>Test Title | Test</title>\r\n  </head>\r\n  <body>\r\n    <h1>Test Title</h1>\r\n    This is a test.\r\n    <hr>\r\n    \r\n      March 4, 2017, 11:25 p.m.\r\n    \r\n    <form method=\"post\">\r\n      <input type='hidden' name='csrfmiddlewaretoken' value='LCwJMutT4xE3JHySLLUFqz2kr1QJA4PB' />\r\n      <p><label for=\"id_name\">Name:</label> <input id=\"id_name\" maxlength=\"100\" name=\"name\" type=\"text\" /></p>\r\n<p><label for=\"id_website\">Website:</label> <input id=\"id_website\" maxlength=\"200\" name=\"website\" type=\"url\" /></p>\r\n<p><label for=\"id_email\">Email:</label> <input id=\"id_email\" maxlength=\"254\" name=\"email\" type=\"email\" /></p>\r\n<p><label for=\"id_text\">Text:</label> <textarea cols=\"40\" id=\"id_text\" name=\"text\" rows=\"10\">\r\n</textarea></p>\r\n      <input type=\"submit\" value=\"Submit\" />\r\n    </form>\r\n    <hr>\r\n    <a href=\"/\">Test</a>\r\n  </body>\r\n</html>\r\n",
+        "path": "/essays/$eid",
+        "data": "{}",
+        "method": "GET"
+    },
+    "model": "replay.action",
+    "pk": 39
+},
+{
+    "fields": {
+        "files": "{}",
+        "name": "Select essay to change | Django site admin",
+        "scenario": 6,
+        "status_code": "200",
+        "order": 1.0,
+        "content": "<!DOCTYPE html>\r\n\r\n<html lang=\"en-us\" >\r\n<head>\r\n<title>Select essay to change | Django site admin</title>\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/admin/css/base.css\" />\r\n\r\n  \r\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"/static/admin/css/changelists.css\" />\r\n  \r\n  \r\n    <script type=\"text/javascript\" src=\"/admin/jsi18n/\"></script>\r\n  \r\n  \r\n  \r\n\r\n<!--[if lte IE 7]><link rel=\"stylesheet\" type=\"text/css\" href=\"/static/admin/css/ie.css\" /><![endif]-->\r\n\r\n<script type=\"text/javascript\">window.__admin_media_prefix__ = \"/static/admin/\";</script>\r\n<script type=\"text/javascript\">window.__admin_utc_offset__ = \"0\";</script>\r\n\r\n\r\n<script type=\"text/javascript\" src=\"/static/admin/js/core.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/jquery.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/jquery.init.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/admin/RelatedObjectLookups.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/actions.js\"></script>\r\n\r\n<script type=\"text/javascript\">\r\n(function($) {\r\n    $(document).ready(function($) {\r\n        $(\"tr input.action-select\").actions();\r\n    });\r\n})(django.jQuery);\r\n</script>\r\n\r\n\r\n<meta name=\"robots\" content=\"NONE,NOARCHIVE\" />\r\n</head>\r\n\r\n\r\n<body class=\" app-tests model-essay change-list\">\r\n\r\n<!-- Container -->\r\n<div id=\"container\">\r\n\r\n    \r\n    <!-- Header -->\r\n    <div id=\"header\">\r\n        <div id=\"branding\">\r\n        \r\n<h1 id=\"site-name\"><a href=\"/admin/\">Django administration</a></h1>\r\n\r\n        </div>\r\n        \r\n        \r\n        <div id=\"user-tools\">\r\n            \r\n                Welcome,\r\n                <strong>admin</strong>.\r\n            \r\n            \r\n                \r\n                    <a href=\"/\">View site</a> /\r\n                \r\n                \r\n                    \r\n                    \r\n                \r\n                \r\n                <a href=\"/admin/password_change/\">Change password</a> /\r\n                \r\n                <a href=\"/admin/logout/\">Log out</a>\r\n            \r\n        </div>\r\n        \r\n        \r\n        \r\n    </div>\r\n    <!-- END Header -->\r\n    \r\n<div class=\"breadcrumbs\">\r\n<a href=\"/admin/\">Home</a>\r\n&rsaquo; <a href=\"/admin/tests/\">Tests</a>\r\n&rsaquo; Essays\r\n</div>\r\n\r\n    \r\n\r\n    \r\n        \r\n    \r\n\r\n    <!-- Content -->\r\n    <div id=\"content\" class=\"flex\">\r\n        \r\n        <h1>Select essay to change</h1>\r\n        \r\n  <div id=\"content-main\">\r\n    \r\n      \r\n        <ul class=\"object-tools\">\r\n          \r\n            <li>\r\n              \r\n              <a href=\"/admin/tests/essay/add/\" class=\"addlink\">\r\n                Add essay\r\n              </a>\r\n            </li>\r\n          \r\n        </ul>\r\n      \r\n    \r\n    \r\n    <div class=\"module\" id=\"changelist\">\r\n      \r\n\r\n\r\n      \r\n\r\n\r\n      \r\n        \r\n      \r\n\r\n      <form id=\"changelist-form\" action=\"\" method=\"post\" novalidate><input type='hidden' name='csrfmiddlewaretoken' value='LCwJMutT4xE3JHySLLUFqz2kr1QJA4PB' />\r\n      \r\n\r\n      \r\n          \r\n<div class=\"actions\">\r\n    <label>Action: <select name=\"action\">\r\n<option value=\"\" selected=\"selected\">---------</option>\r\n<option value=\"delete_selected\">Delete selected essays</option>\r\n</select></label><input class=\"select-across\" name=\"select_across\" type=\"hidden\" value=\"0\" />\r\n    <button type=\"submit\" class=\"button\" title=\"Run the selected action\" name=\"index\" value=\"0\">Go</button>\r\n    \r\n        <script type=\"text/javascript\">var _actions_icnt=\"2\";</script>\r\n        <span class=\"action-counter\">0 of 2 selected</span>\r\n        \r\n    \r\n</div>\r\n\r\n          \r\n\r\n\r\n<div class=\"results\">\r\n<table id=\"result_list\">\r\n<thead>\r\n<tr>\r\n\r\n<th scope=\"col\"  class=\"action-checkbox-column\">\r\n   \r\n   <div class=\"text\"><span><input type=\"checkbox\" id=\"action-toggle\" /></span></div>\r\n   <div class=\"clear\"></div>\r\n</th>\r\n<th scope=\"col\"  class=\"column-__str__\">\r\n   \r\n   <div class=\"text\"><span>Essay</span></div>\r\n   <div class=\"clear\"></div>\r\n</th>\r\n</tr>\r\n</thead>\r\n<tbody>\r\n\r\n\r\n<tr class=\"row1\"><td class=\"action-checkbox\"><input class=\"action-select\" name=\"_selected_action\" type=\"checkbox\" value=\"3\" /></td><th class=\"field-__str__\"><a href=\"/admin/tests/essay/3/\">Test Title</a></th></tr>\r\n\r\n\r\n<tr class=\"row2\"><td class=\"action-checkbox\"><input class=\"action-select\" name=\"_selected_action\" type=\"checkbox\" value=\"2\" /></td><th class=\"field-__str__\"><a href=\"/admin/tests/essay/2/\">Test Title</a></th></tr>\r\n\r\n</tbody>\r\n</table>\r\n</div>\r\n\r\n\r\n          \r\n      \r\n      \r\n\r\n<p class=\"paginator\">\r\n\r\n2 essays\r\n\r\n\r\n</p>\r\n\r\n      </form>\r\n    </div>\r\n  </div>\r\n\r\n        \r\n        <br class=\"clear\" />\r\n    </div>\r\n    <!-- END Content -->\r\n\r\n    <div id=\"footer\"></div>\r\n</div>\r\n<!-- END Container -->\r\n\r\n</body>\r\n</html>\r\n",
+        "path": "/admin/tests/essay/",
+        "data": "{}",
+        "method": "GET"
+    },
+    "model": "replay.action",
+    "pk": 41
+},
+{
+    "fields": {
+        "files": "{}",
+        "name": "Add essay | Django site admin",
+        "scenario": 6,
+        "status_code": "200",
+        "order": 1.0,
+        "content": "<!DOCTYPE html>\r\n\r\n<html lang=\"en-us\" >\r\n<head>\r\n<title>Add essay | Django site admin</title>\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/admin/css/base.css\" />\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/admin/css/forms.css\" />\r\n<!--[if lte IE 7]><link rel=\"stylesheet\" type=\"text/css\" href=\"/static/admin/css/ie.css\" /><![endif]-->\r\n\r\n<script type=\"text/javascript\">window.__admin_media_prefix__ = \"/static/admin/\";</script>\r\n<script type=\"text/javascript\">window.__admin_utc_offset__ = \"0\";</script>\r\n\r\n<script type=\"text/javascript\" src=\"/admin/jsi18n/\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/core.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/jquery.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/jquery.init.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/admin/RelatedObjectLookups.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/actions.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/calendar.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/admin/DateTimeShortcuts.js\"></script>\r\n\r\n<meta name=\"robots\" content=\"NONE,NOARCHIVE\" />\r\n</head>\r\n\r\n\r\n<body class=\" app-tests model-essay change-form\">\r\n\r\n<!-- Container -->\r\n<div id=\"container\">\r\n\r\n    \r\n    <!-- Header -->\r\n    <div id=\"header\">\r\n        <div id=\"branding\">\r\n        \r\n<h1 id=\"site-name\"><a href=\"/admin/\">Django administration</a></h1>\r\n\r\n        </div>\r\n        \r\n        \r\n        <div id=\"user-tools\">\r\n            \r\n                Welcome,\r\n                <strong>admin</strong>.\r\n            \r\n            \r\n                \r\n                    <a href=\"/\">View site</a> /\r\n                \r\n                \r\n                    \r\n                    \r\n                \r\n                \r\n                <a href=\"/admin/password_change/\">Change password</a> /\r\n                \r\n                <a href=\"/admin/logout/\">Log out</a>\r\n            \r\n        </div>\r\n        \r\n        \r\n        \r\n    </div>\r\n    <!-- END Header -->\r\n    \r\n<div class=\"breadcrumbs\">\r\n<a href=\"/admin/\">Home</a>\r\n&rsaquo; <a href=\"/admin/tests/\">Tests</a>\r\n&rsaquo; <a href=\"/admin/tests/essay/\">Essays</a>\r\n&rsaquo; Add essay\r\n</div>\r\n\r\n    \r\n\r\n    \r\n        \r\n    \r\n\r\n    <!-- Content -->\r\n    <div id=\"content\" class=\"colM\">\r\n        \r\n        <h1>Add essay</h1>\r\n        <div id=\"content-main\">\r\n\r\n\r\n\r\n<form enctype=\"multipart/form-data\" action=\"\" method=\"post\" id=\"essay_form\" novalidate><input type='hidden' name='csrfmiddlewaretoken' value='LCwJMutT4xE3JHySLLUFqz2kr1QJA4PB' />\r\n<div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n  <fieldset class=\"module aligned \">\r\n    \r\n    \r\n    \r\n        <div class=\"form-row field-publish_date\">\r\n            \r\n            \r\n                <div>\r\n                    \r\n                    \r\n                        <label for=\"id_publish_date_0\">Publish date:</label>\r\n                        \r\n                            <p class=\"datetime\">Date: <input class=\"vDateField\" id=\"id_publish_date_0\" name=\"publish_date_0\" size=\"10\" type=\"text\" /><br />Time: <input class=\"vTimeField\" id=\"id_publish_date_1\" name=\"publish_date_1\" size=\"8\" type=\"text\" /></p>\r\n                        \r\n                    \r\n                    \r\n                </div>\r\n            \r\n        </div>\r\n    \r\n        <div class=\"form-row field-title\">\r\n            \r\n            \r\n                <div>\r\n                    \r\n                    \r\n                        <label class=\"required\" for=\"id_title\">Title:</label>\r\n                        \r\n                            <input class=\"vTextField\" id=\"id_title\" maxlength=\"100\" name=\"title\" type=\"text\" />\r\n                        \r\n                    \r\n                    \r\n                </div>\r\n            \r\n        </div>\r\n    \r\n        <div class=\"form-row field-text\">\r\n            \r\n            \r\n                <div>\r\n                    \r\n                    \r\n                        <label class=\"required\" for=\"id_text\">Text:</label>\r\n                        \r\n                            <textarea class=\"vLargeTextField\" cols=\"40\" id=\"id_text\" name=\"text\" rows=\"10\">\r\n</textarea>\r\n                        \r\n                    \r\n                    \r\n                </div>\r\n            \r\n        </div>\r\n    \r\n</fieldset>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<div class=\"submit-row\">\r\n<input type=\"submit\" value=\"Save\" class=\"default\" name=\"_save\" />\r\n\r\n\r\n<input type=\"submit\" value=\"Save and add another\" name=\"_addanother\" />\r\n<input type=\"submit\" value=\"Save and continue editing\" name=\"_continue\" />\r\n</div>\r\n\r\n\r\n\r\n    <script type=\"text/javascript\">\r\n        (function($) {\r\n            $(document).ready(function() {\r\n                $('.add-another').click(function(e) {\r\n                    e.preventDefault();\r\n                    showAddAnotherPopup(this);\r\n                });\r\n            \r\n                $('form#essay_form :input:visible:enabled:first').focus()\r\n            \r\n            });\r\n        })(django.jQuery);\r\n    </script>\r\n\r\n\r\n\r\n\r\n<script type=\"text/javascript\">\r\n(function($) {\r\n    var field;\r\n\r\n\r\n})(django.jQuery);\r\n</script>\r\n\r\n\r\n</div>\r\n</form></div>\r\n\r\n        \r\n        <br class=\"clear\" />\r\n    </div>\r\n    <!-- END Content -->\r\n\r\n    <div id=\"footer\"></div>\r\n</div>\r\n<!-- END Container -->\r\n\r\n</body>\r\n</html>\r\n",
+        "path": "/admin/tests/essay/add/",
+        "data": "{}",
+        "method": "GET"
+    },
+    "model": "replay.action",
+    "pk": 43
+},
+{
+    "fields": {
+        "files": "{}",
+        "name": "",
+        "scenario": 6,
+        "status_code": "302",
+        "order": 1.0,
+        "content": "/admin/tests/essay/4/",
+        "path": "/admin/tests/essay/add/",
+        "data": "{\r\n    \"title\": \"Test Title\",\r\n    \"text\": \"This is a test.\",\r\n    \"csrfmiddlewaretoken\": \"LCwJMutT4xE3JHySLLUFqz2kr1QJA4PB\",\r\n    \"publish_date_0\": \"\",\r\n    \"publish_date_1\": \"\",\r\n    \"_continue\": \"Save and continue editing\"\r\n}",
+        "method": "POST"
+    },
+    "model": "replay.action",
+    "pk": 45
+},
+{
+    "fields": {
+        "files": "{}",
+        "name": "Change essay | Django site admin",
+        "scenario": 6,
+        "status_code": "200",
+        "order": 1.0,
+        "content": "<!DOCTYPE html>\r\n\r\n<html lang=\"en-us\" >\r\n<head>\r\n<title>Change essay | Django site admin</title>\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/admin/css/base.css\" />\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/admin/css/forms.css\" />\r\n<!--[if lte IE 7]><link rel=\"stylesheet\" type=\"text/css\" href=\"/static/admin/css/ie.css\" /><![endif]-->\r\n\r\n<script type=\"text/javascript\">window.__admin_media_prefix__ = \"/static/admin/\";</script>\r\n<script type=\"text/javascript\">window.__admin_utc_offset__ = \"0\";</script>\r\n\r\n<script type=\"text/javascript\" src=\"/admin/jsi18n/\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/core.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/jquery.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/jquery.init.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/admin/RelatedObjectLookups.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/actions.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/calendar.js\"></script>\r\n<script type=\"text/javascript\" src=\"/static/admin/js/admin/DateTimeShortcuts.js\"></script>\r\n\r\n<meta name=\"robots\" content=\"NONE,NOARCHIVE\" />\r\n</head>\r\n\r\n\r\n<body class=\" app-tests model-essay change-form\">\r\n\r\n<!-- Container -->\r\n<div id=\"container\">\r\n\r\n    \r\n    <!-- Header -->\r\n    <div id=\"header\">\r\n        <div id=\"branding\">\r\n        \r\n<h1 id=\"site-name\"><a href=\"/admin/\">Django administration</a></h1>\r\n\r\n        </div>\r\n        \r\n        \r\n        <div id=\"user-tools\">\r\n            \r\n                Welcome,\r\n                <strong>admin</strong>.\r\n            \r\n            \r\n                \r\n                    <a href=\"/\">View site</a> /\r\n                \r\n                \r\n                    \r\n                    \r\n                \r\n                \r\n                <a href=\"/admin/password_change/\">Change password</a> /\r\n                \r\n                <a href=\"/admin/logout/\">Log out</a>\r\n            \r\n        </div>\r\n        \r\n        \r\n        \r\n    </div>\r\n    <!-- END Header -->\r\n    \r\n<div class=\"breadcrumbs\">\r\n<a href=\"/admin/\">Home</a>\r\n&rsaquo; <a href=\"/admin/tests/\">Tests</a>\r\n&rsaquo; <a href=\"/admin/tests/essay/\">Essays</a>\r\n&rsaquo; Test Title\r\n</div>\r\n\r\n    \r\n\r\n    \r\n        \r\n        <ul class=\"messagelist\">\r\n          <li class=\"success\">The essay &quot;Test Title&quot; was added successfully. You may edit it again below.</li>\r\n        </ul>\r\n        \r\n    \r\n\r\n    <!-- Content -->\r\n    <div id=\"content\" class=\"colM\">\r\n        \r\n        <h1>Change essay</h1>\r\n        <div id=\"content-main\">\r\n\r\n\r\n  <ul class=\"object-tools\">\r\n    \r\n    <li>\r\n        \r\n        <a href=\"/admin/tests/essay/4/history/\" class=\"historylink\">History</a>\r\n    </li>\r\n    \r\n    \r\n  </ul>\r\n\r\n\r\n<form enctype=\"multipart/form-data\" action=\"\" method=\"post\" id=\"essay_form\" novalidate><input type='hidden' name='csrfmiddlewaretoken' value='LCwJMutT4xE3JHySLLUFqz2kr1QJA4PB' />\r\n<div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n  <fieldset class=\"module aligned \">\r\n    \r\n    \r\n    \r\n        <div class=\"form-row field-publish_date\">\r\n            \r\n            \r\n                <div>\r\n                    \r\n                    \r\n                        <label for=\"id_publish_date_0\">Publish date:</label>\r\n                        \r\n                            <p class=\"datetime\">Date: <input class=\"vDateField\" id=\"id_publish_date_0\" name=\"publish_date_0\" size=\"10\" type=\"text\" /><br />Time: <input class=\"vTimeField\" id=\"id_publish_date_1\" name=\"publish_date_1\" size=\"8\" type=\"text\" /></p>\r\n                        \r\n                    \r\n                    \r\n                </div>\r\n            \r\n        </div>\r\n    \r\n        <div class=\"form-row field-title\">\r\n            \r\n            \r\n                <div>\r\n                    \r\n                    \r\n                        <label class=\"required\" for=\"id_title\">Title:</label>\r\n                        \r\n                            <input class=\"vTextField\" id=\"id_title\" maxlength=\"100\" name=\"title\" type=\"text\" value=\"Test Title\" />\r\n                        \r\n                    \r\n                    \r\n                </div>\r\n            \r\n        </div>\r\n    \r\n        <div class=\"form-row field-text\">\r\n            \r\n            \r\n                <div>\r\n                    \r\n                    \r\n                        <label class=\"required\" for=\"id_text\">Text:</label>\r\n                        \r\n                            <textarea class=\"vLargeTextField\" cols=\"40\" id=\"id_text\" name=\"text\" rows=\"10\">\r\nThis is a test.</textarea>\r\n                        \r\n                    \r\n                    \r\n                </div>\r\n            \r\n        </div>\r\n    \r\n</fieldset>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<div class=\"submit-row\">\r\n<input type=\"submit\" value=\"Save\" class=\"default\" name=\"_save\" />\r\n\r\n    \r\n    <p class=\"deletelink-box\"><a href=\"/admin/tests/essay/4/delete/\" class=\"deletelink\">Delete</a></p>\r\n\r\n\r\n<input type=\"submit\" value=\"Save and add another\" name=\"_addanother\" />\r\n<input type=\"submit\" value=\"Save and continue editing\" name=\"_continue\" />\r\n</div>\r\n\r\n\r\n\r\n    <script type=\"text/javascript\">\r\n        (function($) {\r\n            $(document).ready(function() {\r\n                $('.add-another').click(function(e) {\r\n                    e.preventDefault();\r\n                    showAddAnotherPopup(this);\r\n                });\r\n            \r\n            });\r\n        })(django.jQuery);\r\n    </script>\r\n\r\n\r\n\r\n\r\n<script type=\"text/javascript\">\r\n(function($) {\r\n    var field;\r\n\r\n\r\n})(django.jQuery);\r\n</script>\r\n\r\n\r\n</div>\r\n</form></div>\r\n\r\n        \r\n        <br class=\"clear\" />\r\n    </div>\r\n    <!-- END Content -->\r\n\r\n    <div id=\"footer\"></div>\r\n</div>\r\n<!-- END Container -->\r\n\r\n</body>\r\n</html>\r\n",
+        "path": "/admin/tests/essay/$eid/",
+        "data": "{}",
+        "method": "GET"
+    },
+    "model": "replay.action",
+    "pk": 46
+},
+{
+    "fields": {
+        "action": 38,
+        "pattern": "/essays/\\d+",
+        "order": 1.0
+    },
+    "model": "replay.validator",
+    "pk": 11
+},
+{
+    "fields": {
+        "action": 39,
+        "pattern": "Test\\ Title\\ \\|\\ Test",
+        "order": 1.0
+    },
+    "model": "replay.validator",
+    "pk": 12
+},
+{
+    "fields": {
+        "action": 35,
+        "pattern": "Test",
+        "order": 1.0
+    },
+    "model": "replay.validator",
+    "pk": 13
+},
+{
+    "fields": {
+        "action": 37,
+        "pattern": "Test\\ Title\\ \\|\\ Test",
+        "order": 1.0
+    },
+    "model": "replay.validator",
+    "pk": 14
+},
+{
+    "fields": {
+        "action": 30,
+        "pattern": "Change\\ essay\\ \\|\\ Django\\ site\\ admin",
+        "order": 1.0
+    },
+    "model": "replay.validator",
+    "pk": 15
+},
+{
+    "fields": {
+        "action": 32,
+        "pattern": "/admin/tests/essay/",
+        "order": 1.0
+    },
+    "model": "replay.validator",
+    "pk": 16
+},
+{
+    "fields": {
+        "action": 16,
+        "pattern": "/admin/login/",
+        "order": 1.0
+    },
+    "model": "replay.validator",
+    "pk": 21
+},
+{
+    "fields": {
+        "action": 17,
+        "pattern": "/admin/",
+        "order": 1.0
+    },
+    "model": "replay.validator",
+    "pk": 22
+},
+{
+    "fields": {
+        "action": 18,
+        "pattern": "Site\\ administration\\ \\|\\ Django\\ site\\ admin",
+        "order": 1.0
+    },
+    "model": "replay.validator",
+    "pk": 23
+},
+{
+    "fields": {
+        "action": 45,
+        "pattern": "/admin/tests/essay/(?P<eid>\\d+)/",
+        "order": 1.0
+    },
+    "model": "replay.validator",
+    "pk": 24
+},
+{
+    "fields": {
+        "action": 41,
+        "pattern": "Select\\ essay\\ to\\ change\\ \\|\\ Django\\ site\\ admin",
+        "order": 1.0
+    },
+    "model": "replay.validator",
+    "pk": 25
+},
+{
+    "fields": {
+        "action": 43,
+        "pattern": "Add\\ essay\\ \\|\\ Django\\ site\\ admin",
+        "order": 1.0
+    },
+    "model": "replay.validator",
+    "pk": 26
+},
+{
+    "fields": {
+        "action": 46,
+        "pattern": "Change\\ essay\\ \\|\\ Django\\ site\\ admin",
+        "order": 1.0
+    },
+    "model": "replay.validator",
+    "pk": 27
+}
+]
