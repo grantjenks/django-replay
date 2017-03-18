@@ -9,7 +9,7 @@ Features
 
 - Pure-Python
 - Developed on Python 2.7
-- Tested on CPython 2.7
+- Tested on CPython 2.7, 3.4, and 3.5
 
 Quickstart
 ----------
