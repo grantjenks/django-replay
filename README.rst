@@ -34,7 +34,7 @@ Reference and Indices
 * `Django Replay at GitHub`_
 * `Django Replay Issue Tracker`_
 
-.. _`Django Replay Documentation`: http://www.grantjenks.com/docs/django-replay/
+.. _`Django Replay Documentation`: http://www.grantjenks.com/docs/replay/
 .. _`Django Replay at PyPI`: https://pypi.python.org/pypi/django-replay/
 .. _`Django Replay at GitHub`: https://github.com/grantjenks/django-replay/
 .. _`Django Replay Issue Tracker`: https://github.com/grantjenks/django-replay/issues/

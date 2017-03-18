@@ -25,7 +25,7 @@ setup(
     long_description=readme,
     author='Grant Jenks',
     author_email='contact@grantjenks.com',
-    url='http://www.grantjenks.com/docs/django-replay/',
+    url='http://www.grantjenks.com/docs/replay/',
     license='Apache 2.0',
     packages=find_packages(exclude=('docs', 'tests')),
     package_data={'': ['LICENSE', 'README.rst']},
