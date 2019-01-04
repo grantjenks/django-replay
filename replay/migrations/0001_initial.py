@@ -41,8 +41,8 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('order', models.FloatField(default=1.0)),
-                ('action', models.ForeignKey(to='replay.Action')),
-                ('scenario', models.ForeignKey(to='replay.Scenario')),
+                ('action', models.ForeignKey(on_delete=models.CASCADE, to='replay.Action')),
+                ('scenario', models.ForeignKey(on_delete=models.CASCADE, to='replay.Scenario')),
             ],
             options={
             },
@@ -54,7 +54,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('order', models.FloatField(default=1.0)),
                 ('pattern', models.TextField()),
-                ('action', models.ForeignKey(to='replay.Action')),
+                ('action', models.ForeignKey(on_delete=models.CASCADE, to='replay.Action')),
             ],
             options={
             },

@@ -63,7 +63,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='action',
             name='scenario',
-            field=models.ForeignKey(default=None, blank=True, to='replay.Scenario', null=True),
+            field=models.ForeignKey(default=None, blank=True, on_delete=models.CASCADE, to='replay.Scenario', null=True),
             preserve_default=True,
         ),
         migrations.RunPython(

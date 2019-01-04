@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
+
 import replay
-import sys
 
 
 class Tox(TestCommand):
@@ -12,7 +12,7 @@ class Tox(TestCommand):
     def run_tests(self):
         import tox
         errno = tox.cmdline(self.test_args)
-        sys.exit(errno)
+        exit(errno)
 
 
 with open('README.rst') as reader:
@@ -28,7 +28,6 @@ setup(
     url='http://www.grantjenks.com/docs/replay/',
     license='Apache 2.0',
     packages=find_packages(exclude=('docs', 'tests')),
-    package_data={'': ['LICENSE', 'README.rst']},
     tests_require=['tox'],
     cmdclass={'test': Tox},
     install_requires=[],
@@ -40,6 +39,8 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: Implementation :: CPython',
     ),
 )

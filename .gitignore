@@ -16,3 +16,5 @@ bin/
 /build/
 /dist/
 /django_replay.egg-info/
+
+.DS_Store
