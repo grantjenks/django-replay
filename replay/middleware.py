@@ -8,21 +8,26 @@ def escape(text):
 
 
 class RecorderMiddleware(object):
-    def process_response(self, request, response):
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+
+    def __call__(self, request):
         "Create Action object based on request and response."
         kwargs = {'indent': 4, 'separators': (',', ': ')}
         method = request.method
         data = json.dumps(getattr(request, method), **kwargs)
         files_names = {key: value.name for key, value in request.FILES.items()}
         files = json.dumps(files_names, **kwargs)
+        response = self.get_response(request)
         status_code = response.status_code
         redirect = 300 <= status_code < 400
-        content = response.content if not redirect else response.url
-
+        response_content = response.content
         try:
-            content.decode('utf-8')
+            response_content.decode('utf-8')
         except UnicodeDecodeError:
-            content = ''
+            response_content = ''
+        content = response_content if not redirect else response.url
 
         Action.objects.create(
             method=method,

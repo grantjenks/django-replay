@@ -53,7 +53,9 @@ class ActionAdmin(admin.ModelAdmin):
             pattern = None
 
             if action.status_code.startswith('3'):
-                pattern = action.content
+                pattern = re.escape(action.content)
+                action.name = '%s %s' % (action.method, action.path)
+                action.save()
             else:
                 match = re.search(title_pattern, action.content)
 
@@ -71,6 +73,11 @@ class ActionAdmin(admin.ModelAdmin):
                 )
 
     create_validators.short_description = 'Create validators automatically'
+
+    def clear_content(self, request, queryset):
+        queryset.update(content='')
+
+    clear_content.short_description = 'Clear action content'
 
     def get_queryset(self, request):
         queryset = super(ActionAdmin, self).get_queryset(request)
@@ -94,6 +101,7 @@ class ActionAdmin(admin.ModelAdmin):
     actions = (
         'create_scenario',
         'create_validators',
+        'clear_content',
     )
     fields = (
         ('scenario', 'scenario_link', 'order'),

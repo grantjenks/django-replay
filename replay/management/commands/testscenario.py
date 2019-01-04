@@ -2,9 +2,11 @@
 
 """
 
+import base64
 import json
 import re
 import string
+import uuid
 
 from django.core.management.base import BaseCommand, CommandError
 from django.test import Client
@@ -19,10 +21,14 @@ def expand(text, mapping):
 class Command(BaseCommand):
     can_import_settings = True
 
+    def add_arguments(self, parser):
+        parser.add_argument('scenario', nargs='*')
+
+
     def handle(self, *args, **options):
         try:
             scenarios = []
-            for name in args:
+            for name in options['scenario']:
                 scenario = Scenario.objects.get(name=name)
                 scenarios.append(scenario)
         except Scenario.DoesNotExist:
@@ -43,7 +49,9 @@ class Command(BaseCommand):
         actions = Action.objects.filter(scenario=scenario).order_by('order', 'id')
         errors = 0
 
+        self.stdout.write(repr(scenario))
         for action in actions:
+            print(' ' * 4 + repr(action))
             status_code, content = self.request(action, state)
 
             if status_code != action.status_code:
@@ -60,17 +68,21 @@ class Command(BaseCommand):
             validators = Validator.objects.filter(action=action)
             validators = validators.order_by('order', 'id')
 
+            if validators:
+                if isinstance(content, bytes):
+                    content = content.decode('utf-8')
+
             for validator in validators:
                 pattern = expand(validator.pattern, state)
                 match = re.search(pattern, content)
 
                 if match:
-                    message = 'PASS %r %r %r' % (scenario, action, validator)
-                    self.stdout.write(message)
+                    self.stdout.write(' ' * 8 + repr(validator))
                     state.update(match.groupdict())
                 else:
-                    message = 'FAIL %r %r %r' % (scenario, action, validator)
-                    self.stdout.write(message)
+                    self.stdout.write(' ' * 8 + 'FAIL')
+                    self.stdout.write(' ' * 8 + 'Pattern: ' + pattern)
+                    self.stdout.write(' ' * 8 + 'Content: ' + content)
                     errors += 1
 
         if errors:
@@ -79,6 +91,10 @@ class Command(BaseCommand):
 
     def request(self, action, state):
         func = getattr(self.client, action.method.lower())
+        uuid_bytes = uuid.uuid4().bytes
+        uuid_base64 = base64.urlsafe_b64encode(uuid_bytes)
+        uuid_clean = uuid_base64.strip(b'=').decode()
+        state['__uuid'] = uuid_clean
         data = json.loads(expand(action.data, state))
         files = json.loads(expand(action.files, state))
         path = expand(action.path, state)

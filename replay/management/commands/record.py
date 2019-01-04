@@ -6,6 +6,8 @@ TODO
 
 """
 
+import itertools
+
 from django.core.management import call_command
 from django.core.management.base import BaseCommand
 
@@ -14,8 +16,9 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         from django.conf import settings
-        settings.MIDDLEWARE_CLASSES = (
-            ('replay.middleware.RecorderMiddleware',)
-            + settings.MIDDLEWARE_CLASSES
+        iterator = itertools.chain(
+            ('replay.middleware.RecorderMiddleware',),
+            settings.MIDDLEWARE,
         )
+        settings.MIDDLEWARE = tuple(iterator)
         call_command('runserver')
