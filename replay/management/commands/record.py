@@ -21,4 +21,4 @@ class Command(BaseCommand):
             settings.MIDDLEWARE,
         )
         settings.MIDDLEWARE = tuple(iterator)
-        call_command('runserver')
+        call_command('runserver', *args, **options)
