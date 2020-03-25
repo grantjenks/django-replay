@@ -15,6 +15,7 @@ class Command(BaseCommand):
     can_import_settings = True
 
     def handle(self, *args, **options):
+        # pylint: disable=import-outside-toplevel
         from django.conf import settings
         iterator = itertools.chain(
             ('replay.middleware.RecorderMiddleware',),
