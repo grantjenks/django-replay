@@ -24,7 +24,7 @@ class Scenario(models.Model):
         return self.name
 
 class Action(models.Model):
-    scenario = models.ForeignKey(Scenario, null=True, blank=True, default=None)
+    scenario = models.ForeignKey(Scenario, null=True, blank=True, default=None, on_delete=models.CASCADE)
     order = models.FloatField(
         default=1.0,
         help_text='Actions are run in ascending order.',
@@ -50,7 +50,7 @@ class Action(models.Model):
         return value[:68]
 
 class Validator(models.Model):
-    action = models.ForeignKey(Action, related_name='validators')
+    action = models.ForeignKey(Action, related_name='validators', on_delete=models.CASCADE)
     order = models.FloatField(
         default=1.0,
         help_text='Validators are run in ascending order.',
