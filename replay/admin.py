@@ -3,7 +3,7 @@ import time
 
 from django import forms
 from django.contrib import admin
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.db.models import Count
 from django.shortcuts import redirect
 from django.utils.html import format_html, format_html_join
