@@ -14,7 +14,7 @@ HTTP_METHODS = (
 )
 
 class Scenario(models.Model):
-    name = models.TextField(unique=True)
+    name = models.TextField()
     priority = models.FloatField(
         default=1.0,
         help_text='Scenarios are run in ascending priority.',

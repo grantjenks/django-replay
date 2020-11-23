@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
             name='Scenario',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('name', models.TextField(unique=True)),
+                ('name', models.TextField()),
                 ('priority', models.FloatField(default=1.0)),
             ],
             options={
