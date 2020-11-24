@@ -1,6 +1,9 @@
 import json
 
 from replay.models import Action
+from django.conf import settings
+
+MAX_CONTENT_SIZE = 1024 * 1024  # 1M
 
 def escape(text):
     "Escape text for string.Template substitution."
@@ -10,7 +13,7 @@ def escape(text):
 class RecorderMiddleware(object):
     def __init__(self, get_response):
         self.get_response = get_response
-
+        self.max_content_size = getattr(settings, "REPLAY_MAX_SIZE", MAX_CONTENT_SIZE)
 
     def __call__(self, request):
         "Create Action object based on request and response."
@@ -22,12 +25,15 @@ class RecorderMiddleware(object):
         response = self.get_response(request)
         status_code = response.status_code
         redirect = 300 <= status_code < 400
-        response_content = response.content
-        try:
-            response_content.decode('utf-8')
-        except UnicodeDecodeError:
-            response_content = ''
-        content = response_content if not redirect else response.url
+        if not isinstance(response, StreamingHttpResponse):
+            response_content = response.content[:self.max_content_size]
+            try:
+                response_content.decode('utf-8')
+            except UnicodeDecodeError:
+                response_content = ''
+            content = response_content if not redirect else response.url
+        else:
+            content = "--STREAMED--"
 
         Action.objects.create(
             method=method,
