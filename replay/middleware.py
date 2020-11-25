@@ -2,6 +2,7 @@ import json
 
 from replay.models import Action
 from django.conf import settings
+from django.http import StreamingHttpResponse
 
 MAX_CONTENT_SIZE = 1024 * 1024  # 1M
 
