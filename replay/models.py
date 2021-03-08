@@ -43,6 +43,7 @@ class Action(models.Model):
     )
     status_code = models.CharField(max_length=3)
     content = models.TextField(blank=True)
+    created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         fields = (self.id, self.method, self.path)
