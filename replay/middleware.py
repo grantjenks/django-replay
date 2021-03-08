@@ -20,8 +20,8 @@ class RecorderMiddleware(object):
         "Create Action object based on request and response."
         kwargs = {'indent': 4, 'separators': (',', ': ')}
         method = request.method
-        reqDataAttr = "POST" if method == "POST" else "GET"
-        data = json.dumps(getattr(request, reqDataAttr), **kwargs)
+        reqParams = request.POST if method == "POST" else request.GET
+        data = json.dumps(reqParams, **kwargs)
         files_names = {key: value.name for key, value in request.FILES.items()}
         files = json.dumps(files_names, **kwargs)
         response = self.get_response(request)
