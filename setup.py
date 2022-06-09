@@ -1,7 +1,11 @@
-from setuptools import setup, find_packages
-from setuptools.command.test import test as TestCommand
+"""Package Setup for Django Replay
+"""
 
-import replay
+import pathlib
+import re
+
+import setuptools
+from setuptools.command.test import test as TestCommand
 
 
 class Tox(TestCommand):
@@ -15,32 +19,38 @@ class Tox(TestCommand):
         exit(errno)
 
 
+init = (pathlib.Path('replay') / '__init__.py').read_text()
+match = re.search(r"^__version__ = '(.+)'$", init, re.MULTILINE)
+version = match.group(1)
+
 with open('README.rst') as reader:
     readme = reader.read()
 
 setup(
     name='django-replay',
-    version=replay.__version__,
-    description='Record and replay web requests.',
+    version=version,
+    description='Record and replay Django web requests.',
     long_description=readme,
     author='Grant Jenks',
     author_email='contact@grantjenks.com',
-    url='http://www.grantjenks.com/docs/replay/',
+    url='https://grantjenks.com/docs/replay/',
     license='Apache 2.0',
-    packages=find_packages(exclude=('docs', 'tests')),
+    packages=['replay'],
     tests_require=['tox'],
     cmdclass={'test': Tox},
-    install_requires=[],
+    install_requires=['Django'],
+    project_urls={
+        'Documentation': 'https://grantjenks.com/docs/replay/',
+        'Source': 'https://github.com/grantjenks/django-replay',
+        'Tracker': 'https://github.com/grantjenks/django-replay/issues',
+    },
     classifiers=(
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: Implementation :: CPython',
     ),
 )
