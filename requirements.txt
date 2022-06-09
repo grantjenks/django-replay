@@ -1,13 +1,13 @@
+-e .
+blue
 coverage
-django>=1.11,<1.12
 doc8
-gj
-pylint
+flake8
+ipython
 pytest
 pytest-cov
 pytest-django
 rstcheck
-sortedcontainers
 sphinx
 tox
 twine
