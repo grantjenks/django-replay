@@ -19,7 +19,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('/', views.index, name='index'),
+    path('', views.index, name='index'),
     path('essays/<int:essay_id>', views.essay, name='essay'),
     path('admin/', admin.site.urls),
 ]
