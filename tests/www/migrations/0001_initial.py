@@ -33,6 +33,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='comment',
             name='essay',
-            field=models.ForeignKey(on_delete=models.CASCADE, to='tests.Essay'),
+            field=models.ForeignKey(on_delete=models.CASCADE, to='www.Essay'),
         ),
     ]
