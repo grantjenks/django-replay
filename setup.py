@@ -26,7 +26,7 @@ version = match.group(1)
 with open('README.rst') as reader:
     readme = reader.read()
 
-setup(
+setuptools.setup(
     name='django-replay',
     version=version,
     description='Record and replay Django web requests.',
