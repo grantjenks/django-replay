@@ -11,7 +11,7 @@ class Essay(models.Model):
 
 
 class Comment(models.Model):
-    essay = models.ForeignKey(Essay)
+    essay = models.ForeignKey(Essay, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     website = models.URLField(blank=True)
     email = models.EmailField()
