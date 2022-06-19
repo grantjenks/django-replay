@@ -18,3 +18,5 @@ bin/
 /django_replay.egg-info/
 
 .DS_Store
+
+db.sqlite3
