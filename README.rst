@@ -42,7 +42,7 @@ Reference and Indices
 Django Replay License
 ---------------------
 
-Copyright 2017-2019 Grant Jenks
+Copyright 2017-2022 Grant Jenks
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
 this file except in compliance with the License.  You may obtain a copy of the
