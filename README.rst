@@ -13,6 +13,12 @@ Features
 - Tested on CPython 3.7, 3.8, 3.9, 3.10, and PyPy3
 - Tested on Django 3.2 LTS
 
+.. image:: https://github.com/grantjenks/django-replay/workflows/integration/badge.svg
+   :target: https://github.com/grantjenks/django-replay/actions?query=workflow%3Aintegration
+
+.. image:: https://github.com/grantjenks/django-replay/workflows/release/badge.svg
+   :target: https://github.com/grantjenks/django-replay/actions?query=workflow%3Arelease
+
 
 Quickstart
 ----------
