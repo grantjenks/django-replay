@@ -7,11 +7,11 @@ from .models import Essay, Comment
 def index(request):
     essays = Essay.objects.exclude(publish_date=None)
     essays = essays.order_by('-publish_date')
-    return render(request, 'tests/index.html', locals())
+    return render(request, 'www/index.html', locals())
 
 
 def essay(request, essay_id):
-    essay = get_object_or_404(Essay, id=int(essay_id))
+    essay = get_object_or_404(Essay, pk=essay_id)
 
     if request.method == 'POST':
         form = CommentForm(request.POST)
@@ -24,4 +24,4 @@ def essay(request, essay_id):
         form = CommentForm()
 
     comments = essay.comment_set.order_by('-date')
-    return render(request, 'tests/essay.html', locals())
+    return render(request, 'www/essay.html', locals())
