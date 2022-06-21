@@ -22,10 +22,6 @@ Installing Django Replay is simple with `pip
 
     $ pip install django-replay
 
-
-Tutorial
---------
-
 Add `replay` to the `INSTALLED_APPS` in `settings.py` like:
 
 .. code::
@@ -38,7 +34,27 @@ Then migrate the database like:
 
    $ python manage.py migrate
 
-Now record some actions like:
+Django Replay provides two management commands:
+
+1. replayrecord -- like "runserver" but request/responses are recorded.
+
+2. replaytest -- runs the scenarios with actions and validators.
+
+Django Replay also provides three models:
+
+1. Scenario -- ordered list of actions.
+
+2. Action -- recorded request/response template.
+
+3. Validator -- regular expression for response validation.
+
+These models can be edited in the admin.
+
+
+Tutorial
+--------
+
+To get started, follow the Quickstart and then record some actions:
 
 .. code::
 
@@ -47,7 +63,7 @@ Now record some actions like:
 Navigate to http://127.0.0.1:8000/ and use the web app as normal. Once the
 actions are recorded run CTRL-C to stop the command.
 
-Now create some scenarios in the backend:
+Now create some scenarios in the admin:
 
 .. code::
 
@@ -80,6 +96,14 @@ And the scenarios can be integrated with Django's test framework like so:
 
         def test_scenarios(self):
             test_scenarios()
+
+
+Templates and Validators
+........................
+
+TODO: Describe templating syntax for requests
+
+TODO: Describe regular expression features for validators
 
 
 Reference and Indices
