@@ -134,9 +134,11 @@ class Action(models.Model):
     content = models.TextField(blank=True)
 
     def __str__(self):
-        fields = (self.id, self.method, self.path)
-        value = self.name or '<Action: %s %s %s>' % fields
+        value = self.name or repr(self)
         return value[:68]
+
+    def __repr__(self):
+        return f'<{type(self).__name__}: {self.id} {self.method} {self.path}>'
 
 
 class Validator(models.Model):
