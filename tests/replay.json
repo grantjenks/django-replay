@@ -92,7 +92,7 @@
         "order": 1.0,
         "name": "Change essay | Django site admin",
         "method": "GET",
-        "path": "/admin/tests/essay/$eid/",
+        "path": "/admin/www/essay/$eid/change/",
         "data": "{}",
         "files": "{}",
         "status_code": "200",
@@ -107,7 +107,7 @@
         "order": 1.0,
         "name": "",
         "method": "POST",
-        "path": "/admin/tests/essay/$eid/",
+        "path": "/admin/www/essay/$eid/change/",
         "data": "{\r\n    \"_save\": \"Save\",\r\n    \"title\": \"Test Title\",\r\n    \"text\": \"This is a test.\",\r\n    \"csrfmiddlewaretoken\": \"LCwJMutT4xE3JHySLLUFqz2kr1QJA4PB\",\r\n    \"publish_date_0\": \"2017-03-04\",\r\n    \"publish_date_1\": \"23:24:37\"\r\n}",
         "files": "{}",
         "status_code": "302",
@@ -182,7 +182,7 @@
         "order": 1.0,
         "name": "Select essay to change | Django site admin",
         "method": "GET",
-        "path": "/admin/tests/essay/",
+        "path": "/admin/www/essay/",
         "data": "{}",
         "files": "{}",
         "status_code": "200",
@@ -197,7 +197,7 @@
         "order": 1.0,
         "name": "Add essay | Django site admin",
         "method": "GET",
-        "path": "/admin/tests/essay/add/",
+        "path": "/admin/www/essay/add/",
         "data": "{}",
         "files": "{}",
         "status_code": "200",
@@ -212,7 +212,7 @@
         "order": 1.0,
         "name": "",
         "method": "POST",
-        "path": "/admin/tests/essay/add/",
+        "path": "/admin/www/essay/add/",
         "data": "{\r\n    \"title\": \"Test Title\",\r\n    \"text\": \"This is a test.\",\r\n    \"csrfmiddlewaretoken\": \"LCwJMutT4xE3JHySLLUFqz2kr1QJA4PB\",\r\n    \"publish_date_0\": \"\",\r\n    \"publish_date_1\": \"\",\r\n    \"_continue\": \"Save and continue editing\"\r\n}",
         "files": "{}",
         "status_code": "302",
@@ -227,7 +227,7 @@
         "order": 1.0,
         "name": "Change essay | Django site admin",
         "method": "GET",
-        "path": "/admin/tests/essay/$eid/",
+        "path": "/admin/www/essay/$eid/change/",
         "data": "{}",
         "files": "{}",
         "status_code": "200",
@@ -285,7 +285,7 @@
     "fields": {
         "action": 32,
         "order": 1.0,
-        "pattern": "/admin/tests/essay/"
+        "pattern": "/admin/www/essay/"
     }
 },
 {
@@ -321,7 +321,7 @@
     "fields": {
         "action": 45,
         "order": 1.0,
-        "pattern": "/admin/tests/essay/(?P<eid>\\d+)/"
+        "pattern": "/admin/www/essay/(?P<eid>\\d+)/"
     }
 },
 {
