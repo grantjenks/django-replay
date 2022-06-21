@@ -85,7 +85,7 @@ class Scenario(models.Model):
             raise AssertionError(str(errors))
 
     @staticmethod
-    def _request(self, client, action, state):
+    def _request(client, action, state):
         func = getattr(client, action.method.lower())
         uuid_bytes = uuid.uuid4().bytes
         uuid_base64 = base64.urlsafe_b64encode(uuid_bytes)
