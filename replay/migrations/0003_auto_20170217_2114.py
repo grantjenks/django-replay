@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from collections import defaultdict
 
-from django.db import models, migrations
+from django.db import migrations, models
 
 
 def forwards_func(apps, schema_editor):

@@ -3,13 +3,13 @@ import time
 
 from django import forms
 from django.contrib import admin
-from django.urls import reverse
 from django.db.models import Count
 from django.shortcuts import redirect
+from django.urls import reverse
 from django.utils.html import format_html, format_html_join
 from django.utils.safestring import mark_safe
 
-from replay.models import Action, Validator, Scenario
+from replay.models import Action, Scenario, Validator
 
 
 class ActionAdminForm(forms.ModelForm):

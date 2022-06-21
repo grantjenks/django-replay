@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, redirect, render
 
 from .forms import CommentForm
-from .models import Essay, Comment
+from .models import Comment, Essay
 
 
 def index(request):

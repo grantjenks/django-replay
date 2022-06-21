@@ -1,8 +1,9 @@
 import pathlib
-import pytest
 
+import pytest
 from django.contrib.auth.models import User
 from django.test import TestCase
+
 from replay.utils import test_scenarios
 
 pytestmark = pytest.mark.django_db
