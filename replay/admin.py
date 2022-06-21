@@ -11,6 +11,7 @@ from django.utils.safestring import mark_safe
 
 from replay.models import Action, Validator, Scenario
 
+
 class ActionAdminForm(forms.ModelForm):
     class Meta:
         model = Action
@@ -23,6 +24,7 @@ class ActionAdminForm(forms.ModelForm):
             'content': forms.Textarea(attrs={'rows': 8, 'cols': 80}),
         }
 
+
 class ValidatorInline(admin.StackedInline):
     model = Validator
     extra = 8
@@ -34,6 +36,7 @@ class ValidatorInline(admin.StackedInline):
         'order',
         'pattern',
     )
+
 
 class ActionAdmin(admin.ModelAdmin):
     def create_scenario(self, request, queryset):
@@ -142,7 +145,9 @@ class ActionAdmin(admin.ModelAdmin):
         'status_code',
     )
 
+
 admin.site.register(Action, ActionAdmin)
+
 
 class ValidatorAdmin(admin.ModelAdmin):
     def action_link(self, validator):
@@ -177,7 +182,9 @@ class ValidatorAdmin(admin.ModelAdmin):
         'pattern',
     )
 
+
 admin.site.register(Validator, ValidatorAdmin)
+
 
 class ActionInline(admin.StackedInline):
     def action_link(self, action):
@@ -213,6 +220,7 @@ class ActionInline(admin.StackedInline):
         'validators',
     )
 
+
 class ScenarioAdminForm(forms.ModelForm):
     class Meta:
         model = Scenario
@@ -220,6 +228,7 @@ class ScenarioAdminForm(forms.ModelForm):
         widgets = {
             'name': forms.TextInput(attrs={'size': 80}),
         }
+
 
 class ScenarioAdmin(admin.ModelAdmin):
     fields = (
@@ -242,5 +251,6 @@ class ScenarioAdmin(admin.ModelAdmin):
     search_fields = (
         'name',
     )
+
 
 admin.site.register(Scenario, ScenarioAdmin)
