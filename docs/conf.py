@@ -17,10 +17,12 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 
 import os
+import pathlib
 import sys
 import django
-sys.path.insert(0, os.path.abspath('../tests'))
-os.environ['DJANGO_SETTINGS_MODULE'] = 'tests.settings'
+
+sys.path.insert(0, str(pathlib.Path(__file__).parent.parent / 'tests'))
+os.environ['DJANGO_SETTINGS_MODULE'] = 'www.settings'
 django.setup()
 from replay import __version__
 
@@ -53,7 +55,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Django Replay'
-copyright = u'2017, Grant Jenks'
+copyright = u'2022, Grant Jenks'
 author = u'Grant Jenks'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -70,7 +72,7 @@ release = __version__
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
