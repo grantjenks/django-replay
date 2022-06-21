@@ -38,7 +38,7 @@ class Command(BaseCommand):
             if not scenarios:
                 scenarios = Scenario.objects.all().order_by('priority', 'id')
 
-        self.client = Client()  # pylint: disable=attribute-defined-outside-init
+        self.client = Client()
         state = {}
 
         for scenario in scenarios:
