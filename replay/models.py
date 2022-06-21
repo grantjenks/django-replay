@@ -3,7 +3,6 @@
 * Remember to use dumpdata and loaddata!
 * Do not make actions into templates/generics without great care! Some data
   like files may be deleted because they are stored outside the database.
-
 """
 
 import base64

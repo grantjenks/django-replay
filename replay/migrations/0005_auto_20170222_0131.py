@@ -14,7 +14,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='validator',
             name='action',
-            field=models.ForeignKey(related_name='validators', on_delete=models.CASCADE, to='replay.Action'),
+            field=models.ForeignKey(
+                related_name='validators',
+                on_delete=models.CASCADE,
+                to='replay.Action',
+            ),
             preserve_default=True,
         ),
     ]

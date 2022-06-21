@@ -6,58 +6,106 @@ from django.db import models, migrations
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
             name='Action',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                (
+                    'id',
+                    models.AutoField(
+                        verbose_name='ID',
+                        serialize=False,
+                        auto_created=True,
+                        primary_key=True,
+                    ),
+                ),
                 ('name', models.TextField(default=b'', blank=True)),
-                ('method', models.CharField(max_length=8, choices=[(b'GET', b'GET'), (b'POST', b'POST')])),
+                (
+                    'method',
+                    models.CharField(
+                        max_length=8,
+                        choices=[(b'GET', b'GET'), (b'POST', b'POST')],
+                    ),
+                ),
                 ('path', models.TextField()),
                 ('data', models.TextField()),
                 ('status_code', models.CharField(max_length=3)),
                 ('content', models.TextField(blank=True)),
             ],
-            options={
-            },
+            options={},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
             name='Scenario',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                (
+                    'id',
+                    models.AutoField(
+                        verbose_name='ID',
+                        serialize=False,
+                        auto_created=True,
+                        primary_key=True,
+                    ),
+                ),
                 ('name', models.TextField(unique=True)),
                 ('priority', models.FloatField(default=1.0)),
             ],
-            options={
-            },
+            options={},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
             name='Step',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                (
+                    'id',
+                    models.AutoField(
+                        verbose_name='ID',
+                        serialize=False,
+                        auto_created=True,
+                        primary_key=True,
+                    ),
+                ),
                 ('order', models.FloatField(default=1.0)),
-                ('action', models.ForeignKey(on_delete=models.CASCADE, to='replay.Action')),
-                ('scenario', models.ForeignKey(on_delete=models.CASCADE, to='replay.Scenario')),
+                (
+                    'action',
+                    models.ForeignKey(
+                        on_delete=models.CASCADE, to='replay.Action'
+                    ),
+                ),
+                (
+                    'scenario',
+                    models.ForeignKey(
+                        on_delete=models.CASCADE, to='replay.Scenario'
+                    ),
+                ),
             ],
-            options={
-            },
+            options={},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
             name='Validator',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                (
+                    'id',
+                    models.AutoField(
+                        verbose_name='ID',
+                        serialize=False,
+                        auto_created=True,
+                        primary_key=True,
+                    ),
+                ),
                 ('order', models.FloatField(default=1.0)),
                 ('pattern', models.TextField()),
-                ('action', models.ForeignKey(on_delete=models.CASCADE, to='replay.Action')),
+                (
+                    'action',
+                    models.ForeignKey(
+                        on_delete=models.CASCADE, to='replay.Action'
+                    ),
+                ),
             ],
-            options={
-            },
+            options={},
             bases=(models.Model,),
         ),
     ]

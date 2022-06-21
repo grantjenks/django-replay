@@ -1,5 +1,4 @@
 """Django Replay
-
 """
 
 __title__ = 'replay'

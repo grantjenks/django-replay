@@ -5,6 +5,7 @@ from collections import defaultdict
 
 from django.db import models, migrations
 
+
 def forwards_func(apps, schema_editor):
     db_alias = schema_editor.connection.alias
 
@@ -63,7 +64,13 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='action',
             name='scenario',
-            field=models.ForeignKey(default=None, blank=True, on_delete=models.CASCADE, to='replay.Scenario', null=True),
+            field=models.ForeignKey(
+                default=None,
+                blank=True,
+                on_delete=models.CASCADE,
+                to='replay.Scenario',
+                null=True,
+            ),
             preserve_default=True,
         ),
         migrations.RunPython(

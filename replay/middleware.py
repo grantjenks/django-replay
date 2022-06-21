@@ -4,7 +4,7 @@ from replay.models import Action
 
 
 def escape(text):
-    "Escape text for string.Template substitution."
+    """Escape text for string.Template substitution."""
     return text.replace('$', '$$')
 
 
@@ -13,7 +13,7 @@ class RecorderMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
-        "Create Action object based on request and response."
+        """Create Action object based on request and response."""
         json_dump_kwargs = {'indent': 4, 'separators': (',', ': ')}
         method = request.method
         data = json.dumps(getattr(request, method), **json_dump_kwargs)

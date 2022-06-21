@@ -116,9 +116,7 @@ class ActionAdmin(admin.ModelAdmin):
         'content',
     )
     form = ActionAdminForm
-    inlines = (
-        ValidatorInline,
-    )
+    inlines = (ValidatorInline,)
     list_display = (
         'id',
         'name',
@@ -134,9 +132,7 @@ class ActionAdmin(admin.ModelAdmin):
         'order',
         'id',
     )
-    readonly_fields = (
-        'scenario_link',
-    )
+    readonly_fields = ('scenario_link',)
     save_on_top = True
     search_fields = (
         'name',
@@ -172,9 +168,7 @@ class ValidatorAdmin(admin.ModelAdmin):
         'order',
         'id',
     )
-    readonly_fields = (
-        'action_link',
-    )
+    readonly_fields = ('action_link',)
     save_on_top = True
     search_fields = (
         'action__name',
@@ -236,21 +230,15 @@ class ScenarioAdmin(admin.ModelAdmin):
         'priority',
     )
     form = ScenarioAdminForm
-    inlines = (
-        ActionInline,
-    )
+    inlines = (ActionInline,)
     list_display = (
         'id',
         'name',
         'priority',
     )
-    ordering = (
-        '-id',
-    )
+    ordering = ('-id',)
     save_on_top = True
-    search_fields = (
-        'name',
-    )
+    search_fields = ('name',)
 
 
 admin.site.register(Scenario, ScenarioAdmin)
