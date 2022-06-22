@@ -113,6 +113,16 @@ TODO: Describe templating syntax for requests
 TODO: Describe regular expression features for validators
 
 
+Roadmap
+-------
+
+- Add details to docs (look for TODO)
+- Add more tests ... coverage up to 90% or so
+- Support https://pypi.org/project/parse/ in validators
+- Support testing management commands
+- Support testing emails
+
+
 Reference and Indices
 ---------------------
 
@@ -142,17 +152,3 @@ Unless required by applicable law or agreed to in writing, software distributed
 under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
 CONDITIONS OF ANY KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations under the License.
-
-
-TODO
-----
-
-* Add details to docs (look for TODO)
-
-* Add more tests ... coverage up to 90% or so
-
-* Find a way to use https://pypi.org/project/parse/
-
-* Support testing management commands
-
-* Support testing emails
