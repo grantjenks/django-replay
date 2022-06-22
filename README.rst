@@ -113,16 +113,6 @@ TODO: Describe templating syntax for requests
 TODO: Describe regular expression features for validators
 
 
-Roadmap
--------
-
-- Add details to docs (look for TODO)
-- Add more tests ... coverage up to 90% or so
-- Support https://pypi.org/project/parse/ in validators
-- Support testing management commands
-- Support testing emails
-
-
 Reference and Indices
 ---------------------
 
