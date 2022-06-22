@@ -8,10 +8,11 @@ licensed Django application that records and replays web requests.
 Features
 --------
 
-- Pure-Python
-- Developed on Python 3.10
-- Tested on CPython 3.7, 3.8, 3.9, 3.10, and PyPy3
-- Tested on Django 3.2 LTS
+- Record requests/responses as easy as "runserver"
+- Test scenarios by replaying requests with validators
+- Template requests/responses for dynamic identifiers
+- Tested on Python 3.7, 3.8, 3.9, 3.10
+- Tested on Django 3.2 LTS and Django 4.0
 
 .. image:: https://github.com/grantjenks/django-replay/workflows/integration/badge.svg
    :target: https://github.com/grantjenks/django-replay/actions?query=workflow%3Aintegration
@@ -147,8 +148,6 @@ TODO
 ----
 
 * Add details to docs (look for TODO)
-
-* Add testing for Django 4.0
 
 * Add more tests ... coverage up to 90% or so
 
