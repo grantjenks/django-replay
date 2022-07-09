@@ -35,6 +35,6 @@ class RecordTestCase(TestCase):
             }
         )
         with modifier:
-            response = self.client.get('/')
-        action, = Action.objects.all()
+            self.client.get('/')
+        (action,) = Action.objects.all()
         self.assertEqual(action.path, '/')
