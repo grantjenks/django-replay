@@ -106,6 +106,7 @@ html_theme_options = {
     'show_powered_by': False,
     'github_user': 'grantjenks',
     'github_repo': 'django-replay',
+    'github_type': 'star',
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
