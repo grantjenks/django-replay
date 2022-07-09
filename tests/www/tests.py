@@ -26,6 +26,9 @@ class ReplayTestCase(TestCase):
         User.objects.create_superuser(username='admin', password='password')
         call_command('replaytest', 'Admin Login')
 
+    def test_scenario_fail_status_code(self):
+        test_scenario('Admin Login')
+
 
 class RecordTestCase(TestCase):
     def test_middleware(self):
