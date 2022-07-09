@@ -6,7 +6,7 @@ from django.core.management import call_command
 from django.test import TestCase
 
 from replay.models import Action
-from replay.utils import test_scenarios
+from replay.utils import test_scenario, test_scenarios
 
 pytestmark = pytest.mark.django_db
 
