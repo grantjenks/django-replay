@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.core.management import call_command
 from django.test import TestCase
 
+from replay.models import Action
 from replay.utils import test_scenarios
 
 pytestmark = pytest.mark.django_db
@@ -24,3 +25,16 @@ class ReplayTestCase(TestCase):
     def test_replaytest_scenario(self):
         User.objects.create_superuser(username='admin', password='password')
         call_command('replaytest', 'Admin Login')
+
+
+class RecordTestCase(TestCase):
+    def test_middleware(self):
+        modifier = self.modify_settings(
+            MIDDLEWARE={
+                'prepend': 'replay.middleware.RecorderMiddleware',
+            }
+        )
+        with modifier:
+            response = self.client.get('/')
+        action, = Action.objects.all()
+        self.assertEqual(action.path, '/')
