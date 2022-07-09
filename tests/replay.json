@@ -40,6 +40,38 @@
     }
 },
 {
+    "model": "replay.scenario",
+    "pk": 8,
+    "fields": {
+        "name": "Admin Browse",
+        "priority": 1.0
+    }
+},
+{
+    "model": "replay.scenario",
+    "pk": 9,
+    "fields": {
+        "name": "Admin Create Validators",
+        "priority": 1.0
+    }
+},
+{
+    "model": "replay.scenario",
+    "pk": 10,
+    "fields": {
+        "name": "Admin Clear Content",
+        "priority": 1.0
+    }
+},
+{
+    "model": "replay.scenario",
+    "pk": 11,
+    "fields": {
+        "name": "Admin Create Scenario",
+        "priority": 1.0
+    }
+},
+{
     "model": "replay.action",
     "pk": 16,
     "fields": {
@@ -235,6 +267,201 @@
     }
 },
 {
+    "model": "replay.action",
+    "pk": 111,
+    "fields": {
+        "scenario": 8,
+        "order": 1.0,
+        "name": "Replay administration | Django site admin",
+        "method": "GET",
+        "path": "/admin/replay/",
+        "data": "{}",
+        "files": "{}",
+        "status_code": "200",
+        "content": ""
+    }
+},
+{
+    "model": "replay.action",
+    "pk": 112,
+    "fields": {
+        "scenario": 8,
+        "order": 1.0,
+        "name": "Select action to change | Django site admin",
+        "method": "GET",
+        "path": "/admin/replay/action/",
+        "data": "{}",
+        "files": "{}",
+        "status_code": "200",
+        "content": ""
+    }
+},
+{
+    "model": "replay.action",
+    "pk": 114,
+    "fields": {
+        "scenario": 8,
+        "order": 1.0,
+        "name": "Select scenario to change | Django site admin",
+        "method": "GET",
+        "path": "/admin/replay/scenario/",
+        "data": "{}",
+        "files": "{}",
+        "status_code": "200",
+        "content": ""
+    }
+},
+{
+    "model": "replay.action",
+    "pk": 116,
+    "fields": {
+        "scenario": 8,
+        "order": 1.0,
+        "name": "Select validator to change | Django site admin",
+        "method": "GET",
+        "path": "/admin/replay/validator/",
+        "data": "{}",
+        "files": "{}",
+        "status_code": "200",
+        "content": ""
+    }
+},
+{
+    "model": "replay.action",
+    "pk": 118,
+    "fields": {
+        "scenario": 8,
+        "order": 1.0,
+        "name": "&lt;Action: 16 POST /admin/login/&gt; | Change action | Django site admin",
+        "method": "GET",
+        "path": "/admin/replay/action/16/change/",
+        "data": "{}",
+        "files": "{}",
+        "status_code": "200",
+        "content": ""
+    }
+},
+{
+    "model": "replay.action",
+    "pk": 120,
+    "fields": {
+        "scenario": 8,
+        "order": 1.0,
+        "name": "Admin Login | Change scenario | Django site admin",
+        "method": "GET",
+        "path": "/admin/replay/scenario/1/change/",
+        "data": "{}",
+        "files": "{}",
+        "status_code": "200",
+        "content": ""
+    }
+},
+{
+    "model": "replay.action",
+    "pk": 122,
+    "fields": {
+        "scenario": 8,
+        "order": 1.0,
+        "name": "/essays/\\\\d+ | Change validator | Django site admin",
+        "method": "GET",
+        "path": "/admin/replay/validator/11/change/",
+        "data": "{}",
+        "files": "{}",
+        "status_code": "200",
+        "content": ""
+    }
+},
+{
+    "model": "replay.action",
+    "pk": 128,
+    "fields": {
+        "scenario": 9,
+        "order": 1.0,
+        "name": "Select action to change | Django site admin",
+        "method": "GET",
+        "path": "/admin/replay/action/",
+        "data": "{}",
+        "files": "{}",
+        "status_code": "200",
+        "content": ""
+    }
+},
+{
+    "model": "replay.action",
+    "pk": 130,
+    "fields": {
+        "scenario": 9,
+        "order": 1.0,
+        "name": "POST /admin/replay/action/",
+        "method": "POST",
+        "path": "/admin/replay/action/",
+        "data": "{\r\n    \"csrfmiddlewaretoken\": \"K02fqCnKxUumVjHRtfVOI8Tvd6VPhJgjzYnO3tX06pzN8oQ0eDEXEQPx1mzFhArG\",\r\n    \"action\": \"create_validators\",\r\n    \"select_across\": \"0\",\r\n    \"index\": \"0\",\r\n    \"_selected_action\": \"122\"\r\n}",
+        "files": "{}",
+        "status_code": "302",
+        "content": ""
+    }
+},
+{
+    "model": "replay.action",
+    "pk": 131,
+    "fields": {
+        "scenario": 10,
+        "order": 1.0,
+        "name": "Select action to change | Django site admin",
+        "method": "GET",
+        "path": "/admin/replay/action/",
+        "data": "{}",
+        "files": "{}",
+        "status_code": "200",
+        "content": ""
+    }
+},
+{
+    "model": "replay.action",
+    "pk": 133,
+    "fields": {
+        "scenario": 10,
+        "order": 1.0,
+        "name": "POST /admin/replay/action/",
+        "method": "POST",
+        "path": "/admin/replay/action/",
+        "data": "{\r\n    \"csrfmiddlewaretoken\": \"bLh4Y1nMSRSOxoHxFU1DVvjuMx4KYPG10JCDBSX2rmXfKtQGqiKMRdfwANIAYGRo\",\r\n    \"action\": \"clear_content\",\r\n    \"select_across\": \"0\",\r\n    \"index\": \"0\",\r\n    \"_selected_action\": \"122\"\r\n}",
+        "files": "{}",
+        "status_code": "302",
+        "content": ""
+    }
+},
+{
+    "model": "replay.action",
+    "pk": 134,
+    "fields": {
+        "scenario": 11,
+        "order": 1.0,
+        "name": "Select action to change | Django site admin",
+        "method": "GET",
+        "path": "/admin/replay/action/",
+        "data": "{}",
+        "files": "{}",
+        "status_code": "200",
+        "content": ""
+    }
+},
+{
+    "model": "replay.action",
+    "pk": 136,
+    "fields": {
+        "scenario": 11,
+        "order": 1.0,
+        "name": "POST /admin/replay/action/",
+        "method": "POST",
+        "path": "/admin/replay/action/",
+        "data": "{\r\n    \"csrfmiddlewaretoken\": \"pQXztUGgARNVkr9enQu1KGdrBy3ek5VYeOi86Lgw9mSmxwin8edaGo9tpOH4kW6l\",\r\n    \"action\": \"create_scenario\",\r\n    \"select_across\": \"0\",\r\n    \"index\": \"0\",\r\n    \"_selected_action\": \"122\"\r\n}",
+        "files": "{}",
+        "status_code": "302",
+        "content": ""
+    }
+},
+{
     "model": "replay.validator",
     "pk": 11,
     "fields": {
@@ -349,6 +576,123 @@
         "action": 46,
         "order": 1.0,
         "pattern": "Change\\ essay\\ \\|\\ Django\\ site\\ admin"
+    }
+},
+{
+    "model": "replay.validator",
+    "pk": 31,
+    "fields": {
+        "action": 111,
+        "order": 1.0,
+        "pattern": "Replay\\ administration\\ \\|\\ Django\\ site\\ admin"
+    }
+},
+{
+    "model": "replay.validator",
+    "pk": 32,
+    "fields": {
+        "action": 112,
+        "order": 1.0,
+        "pattern": "Select\\ action\\ to\\ change\\ \\|\\ Django\\ site\\ admin"
+    }
+},
+{
+    "model": "replay.validator",
+    "pk": 33,
+    "fields": {
+        "action": 114,
+        "order": 1.0,
+        "pattern": "Select\\ scenario\\ to\\ change\\ \\|\\ Django\\ site\\ admin"
+    }
+},
+{
+    "model": "replay.validator",
+    "pk": 34,
+    "fields": {
+        "action": 116,
+        "order": 1.0,
+        "pattern": "Select\\ validator\\ to\\ change\\ \\|\\ Django\\ site\\ admin"
+    }
+},
+{
+    "model": "replay.validator",
+    "pk": 35,
+    "fields": {
+        "action": 118,
+        "order": 1.0,
+        "pattern": "\\&lt;Action:\\ 16\\ POST\\ /admin/login/\\&gt;\\ \\|\\ Change\\ action\\ \\|\\ Django\\ site\\ admin"
+    }
+},
+{
+    "model": "replay.validator",
+    "pk": 36,
+    "fields": {
+        "action": 120,
+        "order": 1.0,
+        "pattern": "Admin\\ Login\\ \\|\\ Change\\ scenario\\ \\|\\ Django\\ site\\ admin"
+    }
+},
+{
+    "model": "replay.validator",
+    "pk": 37,
+    "fields": {
+        "action": 122,
+        "order": 1.0,
+        "pattern": "/essays/\\\\\\\\d\\+\\ \\|\\ Change\\ validator\\ \\|\\ Django\\ site\\ admin"
+    }
+},
+{
+    "model": "replay.validator",
+    "pk": 38,
+    "fields": {
+        "action": 134,
+        "order": 1.0,
+        "pattern": "Select\\ action\\ to\\ change\\ \\|\\ Django\\ site\\ admin"
+    }
+},
+{
+    "model": "replay.validator",
+    "pk": 39,
+    "fields": {
+        "action": 136,
+        "order": 1.0,
+        "pattern": "/admin/replay/scenario/\\d+/change/"
+    }
+},
+{
+    "model": "replay.validator",
+    "pk": 40,
+    "fields": {
+        "action": 131,
+        "order": 1.0,
+        "pattern": "Select\\ action\\ to\\ change\\ \\|\\ Django\\ site\\ admin"
+    }
+},
+{
+    "model": "replay.validator",
+    "pk": 41,
+    "fields": {
+        "action": 133,
+        "order": 1.0,
+        "pattern": "/admin/replay/action/"
+    }
+},
+{
+    "model": "replay.validator",
+    "pk": 42,
+    "fields": {
+        "action": 128,
+        "order": 1.0,
+        "pattern": "Select\\ action\\ to\\ change\\ \\|\\ Django\\ site\\ admin"
+    }
+},
+{
+    "model": "replay.validator",
+    "pk": 43,
+    "fields": {
+        "action": 130,
+        "order": 1.0,
+        "pattern": "/admin/replay/action/"
     }
 }
 ]
