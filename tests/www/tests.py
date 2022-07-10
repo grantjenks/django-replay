@@ -32,6 +32,7 @@ class ReplayTestCase(TestCase):
             run_scenario(name='Admin Login')
 
     def test_scenario_fail_validator(self):
+        User.objects.create_superuser(username='admin', password='password')
         validator = Validator.objects.get(pk=23)
         validator.pattern = 'foobar'
         validator.save()
