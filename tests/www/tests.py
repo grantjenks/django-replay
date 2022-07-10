@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from django.core.management import call_command
 from django.test import TestCase
 
-from replay.models import Action
+from replay.models import Action, Validator
 from replay.utils import test_scenario as run_scenario, test_scenarios
 
 pytestmark = pytest.mark.django_db
@@ -27,6 +27,13 @@ class ReplayTestCase(TestCase):
         call_command('replaytest', 'Admin Login')
 
     def test_scenario_fail_status_code(self):
+        with self.assertRaises(AssertionError):
+            run_scenario(name='Admin Login')
+
+    def test_scenario_fail_validator(self):
+        validator = Validator.objects.get(pk=23)
+        validator.pattern = 'foobar'
+        validator.save()
         with self.assertRaises(AssertionError):
             run_scenario(name='Admin Login')
 
