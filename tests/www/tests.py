@@ -6,7 +6,10 @@ from django.core.management import call_command
 from django.test import TestCase
 
 from replay.models import Action, Validator
-from replay.utils import test_scenario as run_scenario, test_scenarios
+from replay.utils import (
+    test_scenario as run_scenario,
+    test_scenarios,
+)
 
 pytestmark = pytest.mark.django_db
 
