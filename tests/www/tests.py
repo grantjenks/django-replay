@@ -27,7 +27,7 @@ class ReplayTestCase(TestCase):
         call_command('replaytest', 'Admin Login')
 
     def test_scenario_fail_status_code(self):
-        test_scenario('Admin Login')
+        test_scenario(name='Admin Login')
 
 
 class RecordTestCase(TestCase):
