@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from django.core.management import call_command
 from django.test import TestCase
 
-from replay.models import Action, Validator
+from replay.models import Action, Scenario, Validator
 from replay.utils import test_scenario as run_scenario
 from replay.utils import test_scenarios
 
@@ -38,6 +38,12 @@ class ReplayTestCase(TestCase):
         validator.save()
         with self.assertRaises(AssertionError):
             run_scenario(name='Admin Login')
+
+    def test_clear(self):
+        call_command('replayclear')
+        self.assertEqual(Action.objects.all().count(), 0)
+        self.assertEqual(Scenario.objects.all().count(), 0)
+        self.assertEqual(Validator.objects.all().count(), 0)
 
 
 class RecordTestCase(TestCase):
