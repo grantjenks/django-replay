@@ -6,7 +6,7 @@ from django.core.management import call_command
 from django.test import TestCase
 
 from replay.models import Action
-from replay.utils import test_scenario, test_scenarios
+from replay.utils import test_scenario as run_scenario, test_scenarios
 
 pytestmark = pytest.mark.django_db
 
@@ -28,7 +28,7 @@ class ReplayTestCase(TestCase):
 
     def test_scenario_fail_status_code(self):
         with self.assertRaises(AssertionError):
-            test_scenario(name='Admin Login')
+            run_scenario(name='Admin Login')
 
 
 class RecordTestCase(TestCase):
